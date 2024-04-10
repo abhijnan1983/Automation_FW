@@ -47,5 +47,11 @@ public class UITest extends setupUtils {
 	public void validate_logo() {
 		Assert.assertTrue(PO_HomePage.logo_displayed());
 	}
+	
+	//Test case to validate that reserve online message is displayed in home page
+	@Test(priority=3)
+	public void validate_reserve_online_message() {
+		Assert.assertTrue(PO_HomePage.reserve_online_message_display());
+	}
 
 }
