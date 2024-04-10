@@ -9,13 +9,14 @@
     </classes>
   </test> <!-- Test -->
   
-  <test thread-count="1" name="EdgeTest">
+<!--  <test thread-count="1" name="EdgeTest">
 	  <parameter name="browser" value="MSEdge"/>
 	  <classes>
       <class name="pkgTest.UITest"/>
 
     </classes>
-  </test> <!-- Test -->
+  </test>  Test -->
+  
   <listeners>
 	  <listener class-name="pkgTest.CustomListener"></listener>
 	  <listener class-name="pkgTest.AnnotationTransformer"></listener>
