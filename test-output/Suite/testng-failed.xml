@@ -11,22 +11,10 @@
       <class name="pkgTest.UITest">
         <methods>
           <include name="initialize_Driver"/>
-          <include name="launch_site"/>
+          <include name="close_pop_up"/>
           <include name="report_configuration"/>
         </methods>
       </class> <!-- pkgTest.UITest -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
-  <test thread-count="5" name="EdgeTest(failed)">
-    <parameter name="browser" value="MSEdge"/>
-    <classes>
-      <class name="pkgTest.UITest">
-        <methods>
-          <include name="initialize_Driver"/>
-          <include name="launch_site"/>
-          <include name="report_configuration"/>
-        </methods>
-      </class> <!-- pkgTest.UITest -->
-    </classes>
-  </test> <!-- EdgeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
