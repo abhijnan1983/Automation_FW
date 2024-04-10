@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,6 +104,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="pkgTest.UITest" class="method navigator-link" hash-for-method="close_pop_up">close_pop_up</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="pkgTest.UITest" class="method navigator-link" hash-for-method="validate_logo">validate_logo</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -129,6 +134,13 @@
                   <a name="close_pop_up">
                   </a> <!-- close_pop_up -->
                   <span class="method-name">close_pop_up</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validate_logo">
+                  </a> <!-- validate_logo -->
+                  <span class="method-name">validate_logo</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -190,16 +202,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'close_pop_up')
 data.setCell(0, 2, 'pkgTest.UITest')
-data.setCell(0, 3, 380);
+data.setCell(0, 3, 592);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'validate_logo')
+data.setCell(1, 2, 'pkgTest.UITest')
+data.setCell(1, 3, 218);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 380 ms</span>
+              <span class="suite-total-time">Total running time: 810 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -231,12 +247,16 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-test before">
-                <span class="method-name">initialize_Driver(Chrome, org.testng.TestRunner@748a654a)</span>
-                <span class="method-start">21 ms</span>
+                <span class="method-name">initialize_Driver(Chrome, org.testng.TestRunner@7134b8a7)</span>
+                <span class="method-start">16 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">close_pop_up</span>
-                <span class="method-start">15438 ms</span>
+                <span class="method-start">13667 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validate_logo</span>
+                <span class="method-start">14271 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
