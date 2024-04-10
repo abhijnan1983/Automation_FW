@@ -12,28 +12,32 @@ import org.testng.annotations.Test;
 
 public class UITest extends setupUtils {
 	
-	WebDriver driver;
+	
+	Page_Objects_Home_Page PO_HomePage;
 	
 	@BeforeTest
 	@Parameters("browser")
 	public void initialize_Driver(String browser,ITestContext context) throws IOException {
 		
-		
+		WebDriver driver;
 		driver=setDriver(browser);
 		context.setAttribute("WebDriver", driver);
+		
+		PO_HomePage=new Page_Objects_Home_Page(driver);
+		
+		driver.get("https://www.partsource.ca/");
+		driver.manage().window().maximize();
 		
 		
 		
 	}
 	
-	@Test
-	public void launch_site() {
-		driver.get("https://www.partsource.ca/");
-		driver.manage().window().maximize();
-		driver.navigate().refresh();
-		WebElement logo=driver.findElement(By.id("abc"));
-		logo.click();
-
+	@Test(priority=1)
+	public void close_pop_up() {
+		
+		PO_HomePage.close_pop_up();
+		
+	
 	}
 
 }
