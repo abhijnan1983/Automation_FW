@@ -14,14 +14,15 @@ public class Step_Defs extends setupUtils {
 	Page_Objects_Home_Page PO_HomePage;
 	
 	@When("^I land on home  using (.+)$")
-	public void launch_page(String browser) {
+	public void launch_page(String browser) throws InterruptedException {
 		
-		System.out.println("browser name is "+browser);
-		test();
+
 		WebDriver driver;
 		driver=setupUtils.setDriver(browser);
+		driver.manage().deleteAllCookies();
 		driver.get("https://www.partsource.ca/");
 		driver.manage().window().maximize();
+		Thread.sleep(5000);
 	}
 	
 	@Then("I verify that pop-up is closed")
