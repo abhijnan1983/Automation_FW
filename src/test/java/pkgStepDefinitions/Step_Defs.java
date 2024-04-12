@@ -12,12 +12,13 @@ import pkgTest.setupUtils;
 public class Step_Defs extends setupUtils {
 	
 	Page_Objects_Home_Page PO_HomePage;
+	public static WebDriver driver;
 	
 	@When("^I land on home  using (.+)$")
 	public void launch_page(String browser) throws InterruptedException {
 		
 
-		WebDriver driver;
+		//WebDriver driver;
 		driver=setupUtils.setDriver(browser);
 		driver.manage().deleteAllCookies();
 		driver.get("https://www.partsource.ca/");
