@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="pkgTest.UITest">
+      <class name="pkgCucumber.TestNGTestRunner">
         <methods>
-          <include name="validate_logo"/>
-          <include name="initialize_Driver"/>
-          <include name="close_pop_up"/>
-          <include name="report_configuration"/>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="2"/>
         </methods>
-      </class> <!-- pkgTest.UITest -->
+      </class> <!-- pkgCucumber.TestNGTestRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

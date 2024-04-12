@@ -26,7 +26,9 @@ public class setupUtils {
 	public static WebDriver driver;
 	private static ThreadLocal<WebDriver> TC=new ThreadLocal<>();
 	
-	
+	public void test() {
+		System.out.println("test");
+	}
 	
 	public static WebDriver setDriver(String browser) {
 		
