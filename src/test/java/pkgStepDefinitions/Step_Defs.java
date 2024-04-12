@@ -43,6 +43,32 @@ public class Step_Defs extends setupUtils {
 	}
 	
 	
+    @And("^I should be able to set up my store in (.+)$") 
+	public void setup_my_store(String postalcode) throws InterruptedException {
+	PO_HomePage.select_store(postalcode); }
+	  
+	@And("rolling images for ads should be displayed")
+	public void rolling_images() throws InterruptedException {
+		PO_HomePage.ads_rolling_images();
+	}
+	
+	@And("top brands section should display new brands on clicking right arrow key in the section")
+	public void top_brands() {
+		PO_HomePage.verify_top_brands();
+	}
+	
+	@And("hiring banner should be displayed")
+	public void hiring_banner() {
+		PO_HomePage.hiring_banner_display();
+	}
+	
+	@And("find store banner should be displayed")
+	public void find_store_banner() {
+		PO_HomePage.find_store_banner();
+	}
+	 
+	
+	
 	
 	
 
