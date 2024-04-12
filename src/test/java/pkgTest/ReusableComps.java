@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -26,6 +27,11 @@ public class ReusableComps {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(3000));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 
+    }
+    
+    public Actions setup_Actions() {
+    	Actions a=new Actions(driver);
+    	return a;
     }
 
 }
