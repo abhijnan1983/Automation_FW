@@ -53,7 +53,7 @@ public class Page_Objects_Search_Page extends ReusableComps {
     public void click_first_filter_option() {
     	WebElementExplicitWait(first_filter_option_count_locator);
     	filter_option_item_count=Integer.parseInt(first_filter_option_count.getText().substring(1, 2));
-    	System.out.println(filter_option_item_count);
+    	
     	WebElementExplicitWait(first_filter_option_click_button_locator);
     	first_filter_option_click_button.click();
     	
@@ -65,8 +65,6 @@ public class Page_Objects_Search_Page extends ReusableComps {
     	
     	WebElementExplicitWait(filtered_items_locator);
     	Integer item_count_after_filter=filtered_items.size();
-    	System.out.println(item_count_after_filter);
-    	System.out.println(filter_option_item_count);
     	Assert.assertTrue(filter_option_item_count.equals(item_count_after_filter));
     }
     

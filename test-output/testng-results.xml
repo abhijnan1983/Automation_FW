@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-15T13:30:06 PDT" name="Default suite" finished-at="2024-04-15T13:30:41 PDT" duration-ms="34390">
+  <suite started-at="2024-04-15T13:37:49 PDT" name="Default suite" finished-at="2024-04-15T13:38:18 PDT" duration-ms="29333">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-04-15T13:30:06 PDT" name="Default test" finished-at="2024-04-15T13:30:41 PDT" duration-ms="34390">
+    <test started-at="2024-04-15T13:37:49 PDT" name="Default test" finished-at="2024-04-15T13:38:18 PDT" duration-ms="29333">
       <class name="pkgCucumber.TestNGTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" started-at="2024-04-15T13:30:07 PDT" name="setUpClass" finished-at="2024-04-15T13:30:08 PDT" duration-ms="1052" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" started-at="2024-04-15T13:37:49 PDT" name="setUpClass" finished-at="2024-04-15T13:37:50 PDT" duration-ms="1016" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@76f2dad9]]>
+                <![CDATA[org.testng.TestRunner@29d405e6]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" started-at="2024-04-15T13:30:08 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-15T13:30:40 PDT" duration-ms="32829" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" started-at="2024-04-15T13:37:50 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-15T13:38:18 PDT" duration-ms="28188" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,26 +34,10 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at pkgTest.Page_Objects_Search_Page.validate_item_count_after_clicked_filter_option(Page_Objects_Search_Page.java:68)
-at pkgStepDefinitions.Step_Defs.validate_number_of_items_search_page(Step_Defs.java:127)
-at ✽.number of items should match with number displayed in filter option(file:///C:/Users/Abhi/Desktop/Selenium/Eclipse/Automation_FW/src/test/java/pkgCucumber/test_cases.feature:107)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" started-at="2024-04-15T13:30:41 PDT" name="tearDownClass" finished-at="2024-04-15T13:30:41 PDT" duration-ms="181" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" started-at="2024-04-15T13:38:18 PDT" name="tearDownClass" finished-at="2024-04-15T13:38:18 PDT" duration-ms="60" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

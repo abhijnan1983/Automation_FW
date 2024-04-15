@@ -84,7 +84,7 @@ Feature: Validate different UI components in the UI of the home page
       | Chrome  |
       
    
-  @Only
+  @tag2
   Scenario Outline: Validate enable and disable state of browse parts button and click browse parts button after 
   selecting a vehicle and then validate the search page
   
