@@ -7,11 +7,14 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pkgTest.Page_Objects_Home_Page;
+import pkgTest.Page_Objects_Search_Page;
 import pkgTest.setupUtils;
 
 public class Step_Defs extends setupUtils {
 	
 	Page_Objects_Home_Page PO_HomePage;
+	Page_Objects_Search_Page PO_SearchPage;
+	
 	public static WebDriver driver;
 	
 	@When("^I land on home  using (.+)$")
@@ -66,6 +69,66 @@ public class Step_Defs extends setupUtils {
 	public void find_store_banner() {
 		PO_HomePage.find_store_banner();
 	}
+	
+	@And("browse parts button should be disabled")
+	public void validate_browse_parts_disable_state() {
+		PO_HomePage.validate_browse_parts_disabled();
+	}
+	
+	@When("^I select vehicle year (.+)$")
+	public void select_year(String year) {
+		PO_HomePage.select_vehicle_year(year);
+	}
+	
+	@When("^I select vehicle make (.+)$")
+	public void select_make(String make) {
+		PO_HomePage.select_vehicle_make(make);
+	}
+	
+	@When("^I select vehicle model (.+)$")
+	public void select_model(String model) {
+		PO_HomePage.select_vehicle_model(model);
+	}
+	
+	@When("^I select vehicle trim (.+)$")
+	public void select_trim(String trim) {
+		PO_HomePage.select_vehicle_trim(trim);
+	}
+	
+	@When("^I select vehicle engine (.+)$")
+	public void select_engine(String engine) throws InterruptedException {
+		PO_HomePage.select_vehicle_engine(engine);
+	}
+	
+	@Then("browse parts button should be enabled")
+	public void validate_browse_parts_enabled() {
+		PO_HomePage.validate_browse_parts_button_enable();
+	}
+	
+	@When("I click on Browse Parts button")
+	public void click_browse_parts_button() {
+		PO_HomePage.click_browse_parts_button();
+	}
+	
+	@Then("Page should launch displaying Change vehicle and Browse Parts button and also vehicle name")
+	public void validate_after_click_browse_parts() throws InterruptedException {
+		PO_HomePage.validate_page_after_clicking_browse_parts();
+	}
+	
+	@When("I click on first filter option in search page")
+	public void click_first_filter_option_search_page() {
+		PO_SearchPage=new Page_Objects_Search_Page(driver);
+		PO_SearchPage.click_first_filter_option();
+	}
+	
+	@Then("number of items should match with number displayed in filter option")
+	public void validate_number_of_items_search_page() {
+		
+		PO_SearchPage.validate_item_count_after_clicked_filter_option();
+	
+	}
+		
+	
 	 
 	
 	

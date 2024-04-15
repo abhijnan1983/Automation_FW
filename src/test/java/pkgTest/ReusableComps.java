@@ -29,9 +29,19 @@ public class ReusableComps {
 
     }
     
+    public void WebElementClickableExplicitWait(By locator) {
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(3000));
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+
+    }
+    
+    
     public Actions setup_Actions() {
     	Actions a=new Actions(driver);
     	return a;
     }
+    
+    
 
 }
