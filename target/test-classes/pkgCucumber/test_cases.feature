@@ -113,7 +113,7 @@ Feature: Validate different UI components in the UI of the home page
       
   
   @Only
-  Scenario Outline: Validate application home page UI components-find store banner
+  Scenario Outline: Validate application home page UI components-product details page
     When I land on home  using <browser>
     Then I verify that pop-up is closed
     When I enter SKU <SKU> number for product search

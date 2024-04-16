@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -35,11 +36,21 @@ public class Page_Objects_Product_Details_Page extends ReusableComps {
     @FindBy(css="div#bv_components_histogram>div+div")
     WebElement read_review_link;
     
+    @FindBy(css="div#shopify-section-static-product>section>article+div")
+    WebElement shadowhost;
+    
+    
+    @FindBy(css="#bv-reviews-rating-snapshot-container")
+    WebElement rating_snapshot;
+    
+
     
     //Declare by annotation to use for explicit wait
     By thumbnail_images_locator=By.cssSelector("nav.product-gallery--navigation>button");
     By rating_button_locator=By.cssSelector("button[class*='bv_main_container_row_flex bv_ratings_summary']");
     By read_review_link_locator=By.cssSelector("div#bv_components_histogram>div+div");
+    By shadowhost_locator=By.cssSelector("div#shopify-section-static-product>section>article+div");
+    By rating_snapshot_locator=By.cssSelector("#bv-reviews-rating-snapshot-container");
     
     
     //Method to validate that there are 3 thumbnail images
@@ -60,8 +71,15 @@ public class Page_Objects_Product_Details_Page extends ReusableComps {
     	
     }
     
-    public void display_review() {
-    	
+    //Method to validate that rating snapshot text is displayed after clicking Read review
+    public void display_review() throws InterruptedException {
+    	WebElementExplicitWait(shadowhost_locator);
+    	 SearchContext rootNode=shadowhost.getShadowRoot();
+    	 Thread.sleep(3000);
+    	 String rating_snapshot_text=rootNode.findElement(rating_snapshot_locator).getText();
+    	 
+    	 Assert.assertEquals(rating_snapshot_text, "Rating Snapshot");
+
     }
     
     

@@ -164,7 +164,7 @@ public class Step_Defs extends setupUtils {
 	}
 	
 	@Then("Review should be displayed")
-	public void review_should_display() {
+	public void review_should_display() throws InterruptedException {
 		PO_ProductDetailsPage.display_review();
 	}
 		
