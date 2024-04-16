@@ -7,6 +7,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pkgTest.Page_Objects_Home_Page;
+import pkgTest.Page_Objects_Product_Details_Page;
 import pkgTest.Page_Objects_Search_Page;
 import pkgTest.setupUtils;
 
@@ -14,6 +15,7 @@ public class Step_Defs extends setupUtils {
 	
 	Page_Objects_Home_Page PO_HomePage;
 	Page_Objects_Search_Page PO_SearchPage;
+	Page_Objects_Product_Details_Page PO_ProductDetailsPage;
 	
 	public static WebDriver driver;
 	
@@ -126,6 +128,44 @@ public class Step_Defs extends setupUtils {
 		
 		PO_SearchPage.validate_item_count_after_clicked_filter_option();
 	
+	}
+	
+	@When("^I enter SKU (.+) number for product search$")
+	public void enter_sku_number(String SKU) {
+		PO_HomePage.enter_skunum(SKU);
+	}
+	
+	@And("hit Enter key")
+	public void hit_enter_key() {
+		PO_HomePage.hit_enter_key();
+	}
+	
+	@Then("product link should be displayed")
+	public void validate_product_link_display() {
+		PO_HomePage.validate_display_of_product_link();
+	}
+	
+	@When("I click product link")
+	public void click_product_link() {
+		PO_HomePage.click_product_link();
+		
+	}
+	
+	@Then("product details page should be displayed with 3 thumbnail images")
+	public void validate_product_details_page_displayed() {
+		PO_ProductDetailsPage=new Page_Objects_Product_Details_Page(driver);
+		PO_ProductDetailsPage.validate_thumbnail_images();
+		
+	}
+	
+	@When("I hover on stars and click read review")
+	public void hover_on_stars_click_review() {
+		PO_ProductDetailsPage.hover_on_stars_click_read_review();
+	}
+	
+	@Then("Review should be displayed")
+	public void review_should_display() {
+		PO_ProductDetailsPage.display_review();
 	}
 		
 	

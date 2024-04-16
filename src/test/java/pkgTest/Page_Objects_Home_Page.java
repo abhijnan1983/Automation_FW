@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -105,6 +106,12 @@ public class Page_Objects_Home_Page extends ReusableComps {
     @FindBy(css="div#YMM_bar>span:nth-child(2)>div>span+input+input")
     WebElement browse_parts_button_2;
     
+    @FindBy(css="input#psHeaderSearchTextBox")
+    WebElement item_search_field;
+    
+    @FindBy(css="div[class='boost-pfs-filter-product-bottom'] a")
+    WebElement product_link;
+    
     //Declare by annotation to use for explicit wait
     By popup_close_button_locator=By.cssSelector("div#m-1635532295580>div+div");
     By home_page_logo_locator=By.cssSelector("div#shopify-section-static-header-2 section div+div>div td a img");
@@ -129,6 +136,8 @@ public class Page_Objects_Home_Page extends ReusableComps {
     By vehicle_engine_locator=By.cssSelector("select#ymm_engine");
     By change_vehicle_button_locator=By.cssSelector("div#YMM_bar>span:nth-child(2)>div>span+input");
     By browse_parts_button_2_locator=By.cssSelector("div#YMM_bar>span:nth-child(2)>div>span+input+input");
+    By item_search_field_locator=By.cssSelector("input#psHeaderSearchTextBox");
+    By product_link_locator=By.cssSelector("div[class='boost-pfs-filter-product-bottom'] a");
     
     //Method to close the pop-up window
     public void close_pop_up() {
@@ -393,6 +402,36 @@ public class Page_Objects_Home_Page extends ReusableComps {
 			WebElementExplicitWait(browse_parts_button_2_locator);
 			Assert.assertTrue(browse_parts_button_2.isEnabled());
 		}
+	}
+	
+	public void enter_skunum(String sku) {
+		WebElementExplicitWait(item_search_field_locator);
+		item_search_field.sendKeys(sku);
+	}
+	
+	public void hit_enter_key() {
+		item_search_field.sendKeys(Keys.ENTER);
+	}
+	
+	public void validate_display_of_product_link() {
+		
+		WebElementExplicitWait(product_link_locator);
+		Assert.assertTrue(product_link.isDisplayed());
+		
+	}
+	
+	public void click_product_link() {
+		
+		try {
+		WebElementExplicitWait(product_link_locator);
+		product_link.click();
+		}catch(StaleElementReferenceException e) {
+			driver.navigate().refresh();
+			WebElementExplicitWait(product_link_locator);
+			product_link.click();
+			
+		}
+		
 	}
 	
 	

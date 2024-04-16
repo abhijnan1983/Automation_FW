@@ -84,7 +84,7 @@ Feature: Validate different UI components in the UI of the home page
       | Chrome  |
       
    
-  @Only
+  @tag2
   Scenario Outline: Validate enable and disable state of browse parts button and click browse parts button after 
   selecting a vehicle and then validate the search page
   
@@ -110,3 +110,20 @@ Feature: Validate different UI components in the UI of the home page
     Examples: 
       | browser |Year|Make  |Model|Trim|Engine													|
       | Chrome  |2019|Toyota|Camry|XLE |L4-152cid 2.5L FI A25A-FKS 203HP|
+      
+  
+  @Only
+  Scenario Outline: Validate application home page UI components-find store banner
+    When I land on home  using <browser>
+    Then I verify that pop-up is closed
+    When I enter SKU <SKU> number for product search
+    And hit Enter key
+    Then product link should be displayed
+    When I click product link
+    Then product details page should be displayed with 3 thumbnail images
+    When I hover on stars and click read review
+    Then Review should be displayed
+
+    Examples: 
+      | browser |SKU    |
+      | Chrome  |0141093|
