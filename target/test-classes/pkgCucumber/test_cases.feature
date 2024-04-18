@@ -127,3 +127,4 @@ Feature: Validate different UI components in the UI of the home page
     Examples: 
       | browser |SKU    |
       | Chrome  |0141093|
+      |	Chrome  |0141094|
