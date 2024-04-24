@@ -5,11 +5,14 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 public class Page_Objects_Home_Page extends ReusableComps {
@@ -17,6 +20,7 @@ public class Page_Objects_Home_Page extends ReusableComps {
 	WebDriver driver;
 	JavascriptExecutor js;
 	Actions a;
+	Select s;
 
 	String url;
 	String brand_name;
@@ -78,6 +82,36 @@ public class Page_Objects_Home_Page extends ReusableComps {
     @FindBy(css="div#r-1573160384857")
     WebElement find_store_banner;
     
+    @FindBy(css="input#vid_browse")
+    WebElement browse_parts_button;
+    
+    @FindBy(css="select#ymm_year")
+    WebElement vehicle_year;
+    
+    @FindBy(css="select#ymm_make")
+    WebElement vehicle_make;
+    
+    @FindBy(css="select#ymm_model")
+    WebElement vehicle_model;
+    
+    @FindBy(css="select#ymm_trim")
+    WebElement vehicle_trim;
+    
+    @FindBy(css="select#ymm_engine")
+    WebElement vehicle_engine;
+    
+    @FindBy(css="div#YMM_bar>span:nth-child(2)>div>span+input")
+    WebElement change_vehicle_button;
+    
+    @FindBy(css="div#YMM_bar>span:nth-child(2)>div>span+input+input")
+    WebElement browse_parts_button_2;
+    
+    @FindBy(css="input#psHeaderSearchTextBox")
+    WebElement item_search_field;
+    
+    @FindBy(css="div[class='boost-pfs-filter-product-bottom'] a")
+    WebElement product_link;
+    
     //Declare by annotation to use for explicit wait
     By popup_close_button_locator=By.cssSelector("div#m-1635532295580>div+div");
     By home_page_logo_locator=By.cssSelector("div#shopify-section-static-header-2 section div+div>div td a img");
@@ -94,8 +128,16 @@ public class Page_Objects_Home_Page extends ReusableComps {
     By top_brands_right_arrow_locator=By.cssSelector("div#m-1689865380373>div>div:nth-child(2)>button:nth-child(2)");
     By hiring_banner_locator=By.cssSelector("div#e-1661522315904");
     By find_store_banner_locator=By.cssSelector("div#r-1573160384857");
-    
-    
+    By browse_parts_button_locator=By.cssSelector("input#vid_browse");
+    By vehicle_year_locator=By.cssSelector("select#ymm_year");
+    By vehicle_make_locator=By.cssSelector("select#ymm_make");
+    By vehicle_model_locator=By.cssSelector("select#ymm_model");
+    By vehicle_trim_locator=By.cssSelector("select#ymm_trim");
+    By vehicle_engine_locator=By.cssSelector("select#ymm_engine");
+    By change_vehicle_button_locator=By.cssSelector("div#YMM_bar>span:nth-child(2)>div>span+input");
+    By browse_parts_button_2_locator=By.cssSelector("div#YMM_bar>span:nth-child(2)>div>span+input+input");
+    By item_search_field_locator=By.cssSelector("input#psHeaderSearchTextBox");
+    By product_link_locator=By.cssSelector("div[class='boost-pfs-filter-product-bottom'] a");
     
     //Method to close the pop-up window
     public void close_pop_up() {
@@ -282,6 +324,116 @@ public class Page_Objects_Home_Page extends ReusableComps {
 		WebElementExplicitWait(find_store_banner_locator);
 		Assert.assertTrue(find_store_banner.isDisplayed());
 	}
+	
+	//Method to verify that browse parts button is not enabled
+	public void validate_browse_parts_disabled() {
+		Assert.assertFalse(browse_parts_button.isEnabled());
+	}
+	
+	//Method to select the vehicle year from drop down
+	public void select_vehicle_year(String year) {
+		WebElementExplicitWait(vehicle_year_locator);
+		s=new Select(vehicle_year);
+		s.selectByVisibleText(year);
+	}
+	
+	//Method to select vehicle make from drop down
+	public void select_vehicle_make(String make) {
+		WebElementExplicitWait(vehicle_make_locator);
+		s=new Select(vehicle_make);
+		s.selectByVisibleText(make);
+	}
+	
+	//Method to select vehicle model from drop down
+	public void select_vehicle_model(String model) {
+		WebElementExplicitWait(vehicle_model_locator);
+		s=new Select(vehicle_model);
+		s.selectByVisibleText(model);
+	}
+	
+	//Method to select vehicle trim from down
+	public void select_vehicle_trim(String trim) {
+		WebElementExplicitWait(vehicle_trim_locator);
+		s=new Select(vehicle_trim);
+		s.selectByVisibleText(trim);
+		
+	}
+	
+	//Method to select vehicle engine from drop down
+	public void select_vehicle_engine(String engine) throws InterruptedException {
+		WebElementExplicitWait(vehicle_engine_locator);
+		s=new Select(vehicle_engine);
+		Thread.sleep(2000);
+		s.selectByVisibleText(engine);
+		
+	}
+	
+	//Method to validate that browse parts button is enabled
+	public void validate_browse_parts_button_enable() {
+		WebElementClickableExplicitWait(browse_parts_button_locator);
+		Assert.assertTrue(browse_parts_button.isEnabled());
+	}
+	
+	//Method to click browse parts button
+	public void click_browse_parts_button() {
+		WebElementExplicitWait(browse_parts_button_locator);
+		browse_parts_button.click();
+	}
+	
+	//Method to validate page after clicking on browse parts button and validate change vehicle and browse parts buttons
+	//are enabled
+	public void validate_page_after_clicking_browse_parts() throws InterruptedException {
+		
+		try {
+			
+			WebElementExplicitWait(change_vehicle_button_locator);
+			Assert.assertTrue(change_vehicle_button.isEnabled());
+			
+			WebElementExplicitWait(browse_parts_button_2_locator);
+			Assert.assertTrue(browse_parts_button_2.isEnabled());
+			
+		}catch(StaleElementReferenceException e) {
+			driver.navigate().refresh();
+			Thread.sleep(3000);
+			
+			WebElementExplicitWait(change_vehicle_button_locator);
+			Assert.assertTrue(change_vehicle_button.isEnabled());
+			
+			WebElementExplicitWait(browse_parts_button_2_locator);
+			Assert.assertTrue(browse_parts_button_2.isEnabled());
+		}
+	}
+	
+	public void enter_skunum(String sku) {
+		WebElementExplicitWait(item_search_field_locator);
+		item_search_field.sendKeys(sku);
+	}
+	
+	public void hit_enter_key() {
+		item_search_field.sendKeys(Keys.ENTER);
+	}
+	
+	public void validate_display_of_product_link() {
+		
+		WebElementExplicitWait(product_link_locator);
+		Assert.assertTrue(product_link.isDisplayed());
+		
+	}
+	
+	public void click_product_link() {
+		
+		try {
+		WebElementExplicitWait(product_link_locator);
+		product_link.click();
+		}catch(StaleElementReferenceException e) {
+			driver.navigate().refresh();
+			WebElementExplicitWait(product_link_locator);
+			product_link.click();
+			
+		}
+		
+	}
+	
 	
 	
 	

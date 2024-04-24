@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-12T13:26:53 PDT" name="Default suite" finished-at="2024-04-12T13:29:05 PDT" duration-ms="132167">
+  <suite started-at="2024-04-17T20:22:18 PDT" name="Default suite" finished-at="2024-04-17T20:23:24 PDT" duration-ms="65827">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-04-12T13:26:53 PDT" name="Default test" finished-at="2024-04-12T13:29:05 PDT" duration-ms="132167">
+    <test started-at="2024-04-17T20:22:18 PDT" name="Default test" finished-at="2024-04-17T20:23:24 PDT" duration-ms="65827">
       <class name="pkgCucumber.TestNGTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" started-at="2024-04-12T13:26:53 PDT" name="setUpClass" finished-at="2024-04-12T13:26:54 PDT" duration-ms="999" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" started-at="2024-04-17T20:22:18 PDT" name="setUpClass" finished-at="2024-04-17T20:22:19 PDT" duration-ms="1173" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@44384b4a]]>
+                <![CDATA[org.testng.TestRunner@6401188a]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" started-at="2024-04-12T13:26:54 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-12T13:27:12 PDT" duration-ms="17861" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" started-at="2024-04-17T20:22:19 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-17T20:22:50 PDT" duration-ms="31129" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Validate application home page UI components-pop up closed"]]>
+                <![CDATA["Validate application home page UI components-product details page"]]>
               </value>
             </param>
             <param index="1">
@@ -37,11 +37,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" started-at="2024-04-12T13:27:12 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-12T13:27:28 PDT" duration-ms="16412" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" started-at="2024-04-17T20:22:51 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-17T20:23:23 PDT" duration-ms="32815" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Validate application home page UI components-logo displayed"]]>
+                <![CDATA["Validate application home page UI components-product details page"]]>
               </value>
             </param>
             <param index="1">
@@ -53,87 +53,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" started-at="2024-04-12T13:27:28 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-12T13:27:46 PDT" duration-ms="18219" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate application home page UI components-reserve online message"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Validate different UI components in the UI of the home page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" started-at="2024-04-12T13:27:46 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-12T13:28:18 PDT" duration-ms="31800" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate application home page UI components-Make my store"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Validate different UI components in the UI of the home page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" started-at="2024-04-12T13:28:18 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-12T13:28:35 PDT" duration-ms="17464" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate application home page UI components-top brands"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Validate different UI components in the UI of the home page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" started-at="2024-04-12T13:28:35 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-12T13:28:49 PDT" duration-ms="13640" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate application home page UI components-hiring banner"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Validate different UI components in the UI of the home page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" started-at="2024-04-12T13:28:49 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-12T13:29:05 PDT" duration-ms="15540" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate application home page UI components-find store banner"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Validate different UI components in the UI of the home page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" started-at="2024-04-12T13:29:05 PDT" name="tearDownClass" finished-at="2024-04-12T13:29:05 PDT" duration-ms="142" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:pkgCucumber.TestNGTestRunner@8297b3a]" started-at="2024-04-17T20:23:23 PDT" name="tearDownClass" finished-at="2024-04-17T20:23:24 PDT" duration-ms="301" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
