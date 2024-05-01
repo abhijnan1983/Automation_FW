@@ -128,3 +128,18 @@ Feature: Validate different UI components in the UI of the home page
       | browser |SKU    |
       | Chrome  |0141093|
       |	Chrome  |0141094|
+
+      
+  @newscript
+  Scenario Outline: Add item to Cart from product page
+    When I land on home  using <browser>
+    Then I verify that pop-up is closed
+    And I should be able to set up my store in <postal-code>
+    When I enter SKU <SKU> number for product search
+    And hit Enter key
+    Then product link should be displayed
+    When I click product link
+
+    Examples: 
+      | browser |postal-code|SKU|
+      | Chrome  |L4N0W5|0287938|

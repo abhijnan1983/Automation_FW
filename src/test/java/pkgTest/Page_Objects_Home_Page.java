@@ -186,7 +186,8 @@ public class Page_Objects_Home_Page extends ReusableComps {
 	  WebElementExplicitWait(postal_code_entry_locator);
 	  a.moveToElement(postal_code_entry).click().sendKeys(postal_code).build().perform();
 	  
-	  WebElementExplicitWait(submit_button_locator); submit_button.click();
+	  WebElementExplicitWait(submit_button_locator); 
+	  submit_button.click();
 	  
 	  js.executeScript("window.scrollBy(0,250)", "");
 	  WebElementExplicitWait(make_my_store_button_locator);
