@@ -112,7 +112,7 @@ Feature: Validate different UI components in the UI of the home page
       | Chrome  |2019|Toyota|Camry|XLE |L4-152cid 2.5L FI A25A-FKS 203HP|
       
   
-  @Only
+  @tag2
   Scenario Outline: Validate application home page UI components-product details page
     When I land on home  using <browser>
     Then I verify that pop-up is closed

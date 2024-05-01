@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Apr 17 20:22:18 PDT 2024</td>
+<td>Started on:</td><td>Wed May 01 12:16:49 PDT 2024</td>
 </tr>
-<tr><td>Total time:</td><td>65 seconds (65827 ms)</td>
+<tr><td>Total time:</td><td>212 seconds (212312 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,77 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate application home page UI components-product details page", "Validate different UI components in the UI of the home page"</td>
+<td><div><pre>org.openqa.selenium.NoSuchShadowRootException: no such shadow root
+  (Session info: chrome=114.0.5735.199)
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;DESKTOP-0IJD7UK&apos;, ip: &apos;10.0.0.24&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f3c73ef1e2ff0a38a0f70c71fba251b2, getElementShadowRoot {id=5890869EE4E8A1928B16F9BA1DA23BA9_element_70}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Abhi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:61345}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61345/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (f3c73ef1e2ff0a38a0f70c71fba251b2)] -&gt; css selector: div#shopify-section-static-product&gt;section&gt;article+div]
+Session ID: f3c73ef1e2ff0a38a0f70c71fba251b2
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.getShadowRoot(RemoteWebElement.java:245)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.getShadowRoot(Unknown Source)
+	at pkgTest.Page_Objects_Product_Details_Page.display_review(Page_Objects_Product_Details_Page.java:77)
+	at pkgStepDefinitions.Step_Defs.review_should_display(Step_Defs.java:168)
+	at ?.Review should be displayed(file:///C:/Users/Abhi/Desktop/Selenium/Eclipse/Automation_FW/src/test/java/pkgCucumber/test_cases.feature:125)
+</pre></div><a href='#' onClick='toggleBox("stack-trace580695256", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace580695256'><pre>org.openqa.selenium.NoSuchShadowRootException: no such shadow root
+  (Session info: chrome=114.0.5735.199)
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;DESKTOP-0IJD7UK&apos;, ip: &apos;10.0.0.24&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f3c73ef1e2ff0a38a0f70c71fba251b2, getElementShadowRoot {id=5890869EE4E8A1928B16F9BA1DA23BA9_element_70}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Abhi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:61345}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61345/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (f3c73ef1e2ff0a38a0f70c71fba251b2)] -&gt; css selector: div#shopify-section-static-product&gt;section&gt;article+div]
+Session ID: f3c73ef1e2ff0a38a0f70c71fba251b2
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.getShadowRoot(RemoteWebElement.java:245)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.getShadowRoot(Unknown Source)
+	at pkgTest.Page_Objects_Product_Details_Page.display_review(Page_Objects_Product_Details_Page.java:77)
+	at pkgStepDefinitions.Step_Defs.review_should_display(Step_Defs.java:168)
+	at ?.Review should be displayed(file:///C:/Users/Abhi/Desktop/Selenium/Eclipse/Automation_FW/src/test/java/pkgCucumber/test_cases.feature:125)
+</pre></div></td>
+<td>28</td>
+<td>pkgCucumber.TestNGTestRunner@8297b3a</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,14 +147,49 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate application home page UI components-product details page", "Validate different UI components in the UI of the home page"</td>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate application home page UI components-Make my store", "Validate different UI components in the UI of the home page"</td>
 <td></td>
-<td>32</td>
+<td>39</td>
+<td>pkgCucumber.TestNGTestRunner@8297b3a</td></tr>
+<tr>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate application home page UI components-hiring banner", "Validate different UI components in the UI of the home page"</td>
+<td></td>
+<td>16</td>
+<td>pkgCucumber.TestNGTestRunner@8297b3a</td></tr>
+<tr>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate application home page UI components-pop up closed", "Validate different UI components in the UI of the home page"</td>
+<td></td>
+<td>14</td>
+<td>pkgCucumber.TestNGTestRunner@8297b3a</td></tr>
+<tr>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate application home page UI components-reserve online message", "Validate different UI components in the UI of the home page"</td>
+<td></td>
+<td>15</td>
+<td>pkgCucumber.TestNGTestRunner@8297b3a</td></tr>
+<tr>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate application home page UI components-find store banner", "Validate different UI components in the UI of the home page"</td>
+<td></td>
+<td>14</td>
+<td>pkgCucumber.TestNGTestRunner@8297b3a</td></tr>
+<tr>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate enable and disable state of browse parts button and click browse parts button after", "Validate different UI components in the UI of the home page"</td>
+<td></td>
+<td>27</td>
+<td>pkgCucumber.TestNGTestRunner@8297b3a</td></tr>
+<tr>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate application home page UI components-logo displayed", "Validate different UI components in the UI of the home page"</td>
+<td></td>
+<td>12</td>
+<td>pkgCucumber.TestNGTestRunner@8297b3a</td></tr>
+<tr>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate application home page UI components-top brands", "Validate different UI components in the UI of the home page"</td>
+<td></td>
+<td>14</td>
 <td>pkgCucumber.TestNGTestRunner@8297b3a</td></tr>
 <tr>
 <td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate application home page UI components-product details page", "Validate different UI components in the UI of the home page"</td>
 <td></td>
-<td>31</td>
+<td>27</td>
 <td>pkgCucumber.TestNGTestRunner@8297b3a</td></tr>
 </table><p>
 </body>
