@@ -120,7 +120,7 @@ Feature: Validate different UI components in the UI of the home page
     And hit Enter key
     Then product link should be displayed
     When I click product link
-    Then product details page should be displayed with 3 thumbnail images
+    Then product details page should be displayed with thumbnail images
     When I hover on stars and click read review
     Then Review should be displayed
 
@@ -139,6 +139,7 @@ Feature: Validate different UI components in the UI of the home page
     And hit Enter key
     Then product link should be displayed
     When I click product link
+    Then product details page should be displayed with thumbnail images
 
     Examples: 
       | browser |postal-code|SKU|

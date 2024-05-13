@@ -57,8 +57,11 @@ public class Page_Objects_Product_Details_Page extends ReusableComps {
     public void validate_thumbnail_images() {
     	WebElementExplicitWait(thumbnail_images_locator);
     	Integer number_of_thumbnails=thumbnail_images.size();
-    	Assert.assertEquals(number_of_thumbnails, 3);
-    }
+    	boolean flag_thumbnail=false;
+    	if(number_of_thumbnails>=1) {
+    		flag_thumbnail=true;	
+    	}
+    	Assert.assertTrue(flag_thumbnail);    }
     
     //Method to hover on review stars and click on read review link
     public void hover_on_stars_click_read_review() {

@@ -151,7 +151,7 @@ public class Step_Defs extends setupUtils {
 		
 	}
 	
-	@Then("product details page should be displayed with 3 thumbnail images")
+	@Then("product details page should be displayed with thumbnail images")
 	public void validate_product_details_page_displayed() {
 		PO_ProductDetailsPage=new Page_Objects_Product_Details_Page(driver);
 		PO_ProductDetailsPage.validate_thumbnail_images();

@@ -120,7 +120,7 @@ Feature: Validate different UI components in the UI of the home page
     And hit Enter key
     Then product link should be displayed
     When I click product link
-    Then product details page should be displayed with 3 thumbnail images
+    Then product details page should be displayed with thumbnail images
     When I hover on stars and click read review
     Then Review should be displayed
 
@@ -139,6 +139,37 @@ Feature: Validate different UI components in the UI of the home page
     And hit Enter key
     Then product link should be displayed
     When I click product link
+    Then product details page should be displayed with thumbnail images
+    When I as user click Add to Cart button
+    Then Added to your Cart banner should be displayed
+    And Added to your cart banner should have View Cart and Reserve Now button
+    When I as user click View Cart
+    Then Cart page should be displayed
+    And pickup store should be displayed
+    And Subtotal should be displayed
+    And Quantity selector should be displayed
+    And I as user should be able to change to qty to <new qty>
+    And Reserve online checklist should be displayed
+    When I as user click Reserve Now button
+    Then Checkout page should be displayed
+    And Email cursor should be on email address field when the page is launched
+    And Item thubnail image should be displayed
+    And product name should be displayed
+    And total pre-tax should be displayed
+    And Email address field should be displayed
+    When I as user enter email address "<email>"
+    And click on consent checkbox
+    And enter first name "<firstname>"
+    And enter last name "<lastname>"
+    And enter address "<address>"
+    And enter Apartment number "<Apt Number>"
+    And enter City "<City>"
+    And select province "<Province>"
+    And enter postal code "<Postal Code>"
+    And enter phone number "<Phone Number>"
+    And Click Continue button
+    Then order placement page should be displayed with button Complete Reservation
+    
 
     Examples: 
       | browser |postal-code|SKU|
