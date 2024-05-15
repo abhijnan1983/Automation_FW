@@ -6,6 +6,7 @@ import org.testng.Assert;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pkgTest.Page_Objects_Cart_Page;
 import pkgTest.Page_Objects_Home_Page;
 import pkgTest.Page_Objects_Product_Details_Page;
 import pkgTest.Page_Objects_Search_Page;
@@ -16,6 +17,7 @@ public class Step_Defs extends setupUtils {
 	Page_Objects_Home_Page PO_HomePage;
 	Page_Objects_Search_Page PO_SearchPage;
 	Page_Objects_Product_Details_Page PO_ProductDetailsPage;
+	Page_Objects_Cart_Page PO_Cart_Page;
 	
 	public static WebDriver driver;
 	
@@ -27,8 +29,9 @@ public class Step_Defs extends setupUtils {
 		driver=setupUtils.setDriver(browser);
 		driver.manage().deleteAllCookies();
 		driver.get("https://www.partsource.ca/");
-		driver.manage().window().maximize();
 		Thread.sleep(5000);
+		driver.manage().window().maximize();
+		
 	}
 	
 	@Then("I verify that pop-up is closed")
@@ -172,9 +175,34 @@ public class Step_Defs extends setupUtils {
 	public void click_add_to_cart_button() {
 		PO_ProductDetailsPage.click_add_to_cart_button();
 	}
-		
 	
-	 
+	@Then("Added to your Cart header should be displayed")
+	public void added_to_cart_banner_displayed() throws InterruptedException {
+		PO_ProductDetailsPage.validate_added_to_cart_header();
+	}
+	
+	@When("I as user click View Cart")
+	public void click_vew_cart() {
+		PO_ProductDetailsPage.click_view_cart();
+	}
+	
+	@Then("Cart page should be displayed")
+	public void cart_page_displayed() {
+		
+		PO_Cart_Page=new Page_Objects_Cart_Page(driver);
+		PO_Cart_Page.cart_page_url();
+		
+	}
+		
+	@And("pickup store should be displayed")
+	public void pick_up_store_cart_page() {
+		PO_Cart_Page.validate_cart_selected_store();
+	}
+	
+	@And("Subtotal should be displayed")
+	public void subtotal_display() {
+		PO_Cart_Page.validate_cart_subtotal();
+	}
 	
 	
 	
