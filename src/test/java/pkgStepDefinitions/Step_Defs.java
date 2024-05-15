@@ -167,6 +167,11 @@ public class Step_Defs extends setupUtils {
 	public void review_should_display() throws InterruptedException {
 		PO_ProductDetailsPage.display_review();
 	}
+	
+	@When("I as user click Add to Cart button")
+	public void click_add_to_cart_button() {
+		PO_ProductDetailsPage.click_add_to_cart_button();
+	}
 		
 	
 	 

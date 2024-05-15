@@ -43,6 +43,10 @@ public class Page_Objects_Product_Details_Page extends ReusableComps {
     @FindBy(css="#bv-reviews-rating-snapshot-container")
     WebElement rating_snapshot;
     
+    @FindBy(css="button#ps_btnAddToCart")
+    WebElement add_to_cart_button;
+    
+    
 
     
     //Declare by annotation to use for explicit wait
@@ -51,6 +55,7 @@ public class Page_Objects_Product_Details_Page extends ReusableComps {
     By read_review_link_locator=By.cssSelector("div#bv_components_histogram>div+div");
     By shadowhost_locator=By.cssSelector("div#shopify-section-static-product>section>article+div");
     By rating_snapshot_locator=By.cssSelector("#bv-reviews-rating-snapshot-container");
+    By add_to_cart_button_locator=By.cssSelector("button#ps_btnAddToCart");
     
     
     //Method to validate that there are 3 thumbnail images
@@ -83,6 +88,14 @@ public class Page_Objects_Product_Details_Page extends ReusableComps {
     	 
     	 Assert.assertEquals(rating_snapshot_text, "Rating Snapshot");
 
+    }
+    
+    //Method to click Add to Cart button
+    public void click_add_to_cart_button() {
+    	
+    	WebElementExplicitWait(add_to_cart_button_locator);
+    	add_to_cart_button.click();
+    	
     }
     
     
