@@ -33,12 +33,57 @@ public class Page_Objects_Checkout_Page extends ReusableComps {
     @FindBy(css="div.jCic4._1fragemod._1fragemoa._1fragemuu p")
     WebElement checkout_page_item_name;
     
+    @FindBy(css="div.jCic4._1fragemod._1fragemoa._1fragemuu strong")
+    WebElement checkout_page_total_pretax;
+    
+    @FindBy(css="input#marketing_opt_in")
+    WebElement consent_checkbox;
+    
+    @FindBy(css="input#TextField0")
+    WebElement fname_field;
+    
+    @FindBy(css="input#TextField1")
+    WebElement lname_field;
+    
+    @FindBy(css="input#billing-address1")
+    WebElement address_field;
+    
+    
+    @FindBy(css="input#TextField2")
+    WebElement apt_field;
+    
+    @FindBy(css="input#TextField3")
+    WebElement city_field;
+    
+    @FindBy(css="select#Select1")
+    WebElement province_field;
+    
+    @FindBy(css="input#TextField4")
+    WebElement postal_code_field;
+    
+    @FindBy(css="input#TextField5")
+    WebElement phone_number_field;
+    
+    @FindBy(css="div.oQEAZ button")
+    WebElement continue_button;
  
     
     //Declare by annotation to use for explicit wait
     By email_input_checkout_page_locator=By.cssSelector("input#email");
     By checkout_page_item_image_thumbnail_locator=By.cssSelector("div.jCic4._1fragemod._1fragemoa._1fragemuu img");
     By checkout_page_item_name_locator=By.cssSelector("div.jCic4._1fragemod._1fragemoa._1fragemuu p");
+    By checkout_page_total_pretax_locator=By.cssSelector("div.jCic4._1fragemod._1fragemoa._1fragemuu strong");
+    By consent_checkbox_locator=By.cssSelector("input#marketing_opt_in");
+    By fname_field_locator=By.cssSelector("input#TextField0");
+    By lname_field_locator=By.cssSelector("input#TextField1");
+    By address_field_locator=By.cssSelector("input#billing-address1");
+    By apt_field_locator=By.cssSelector("input#TextField2");
+    By city_field_locator=By.cssSelector("input#TextField3");
+    By province_field_locator=By.cssSelector("select#Select1");
+    By postal_code_field_locator=By.cssSelector("input#TextField4");
+    By phone_number_field_locator=By.cssSelector("input#TextField5");
+    By continue_button_locator=By.cssSelector("div.oQEAZ button");
+    
     
     public void validate_active_element_page_launch() {
     	WebElement actual_Active_element=driver.switchTo().activeElement();
@@ -56,10 +101,69 @@ public class Page_Objects_Checkout_Page extends ReusableComps {
     	
     	WebElementExplicitWait(checkout_page_item_name_locator);
     	Assert.assertTrue(checkout_page_item_name.isDisplayed());
-    	
+    }
+    
+    public void checkout_page_total_display() {
+    	WebElementExplicitWait(checkout_page_total_pretax_locator);
+    	Assert.assertTrue(checkout_page_total_pretax.isDisplayed());
     	
     }
+    
+    public void enter_email_address(String email) {
+    	email_input_checkout_page.sendKeys(email);
+    }
+    
+    public void click_consent_checkbox() {
+    	WebElementExplicitWait(consent_checkbox_locator);
+    	consent_checkbox.click();
+    	Assert.assertTrue(consent_checkbox.isSelected());
+    	
+    }
+    
+    public void enter_firstname(String fname) {
+    	WebElementExplicitWait(fname_field_locator);
+    	fname_field.sendKeys(fname);
+    }
+    
+    public void enter_lname(String lname) {
+    	WebElementExplicitWait(lname_field_locator);
+    	lname_field.sendKeys(lname);
+    }
+    
+    public void enter_address(String address) {
+    	WebElementExplicitWait(address_field_locator);
+    	address_field.sendKeys(address);
+    }
+    
+    public void enter_aptnum(String aptnum) {
+    	WebElementExplicitWait(apt_field_locator);
+    	apt_field.sendKeys(aptnum);
+    }
+    
+    public void enter_city(String city) {
+    	WebElementExplicitWait(city_field_locator);
+    	city_field.sendKeys(city);
+    }
 	
+	public void select_province(String province) {
+		WebElementExplicitWait(province_field_locator);
+		s=new Select(province_field);
+		s.selectByVisibleText(province);
+	}
 	
+	public void enter_postal_code(String postal_code) {
+		WebElementExplicitWait(postal_code_field_locator);
+		postal_code_field.sendKeys(postal_code);
+	}
+	
+	public void enter_phone_number(String phone_number) {
+		WebElementExplicitWait(phone_number_field_locator);
+		phone_number_field.sendKeys(phone_number);
+	}
+	
+	public void click_continue_button() {
+		WebElementExplicitWait(continue_button_locator);
+		continue_button.click();
+	}
 
 }

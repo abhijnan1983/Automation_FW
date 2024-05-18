@@ -239,6 +239,79 @@ public class Step_Defs extends setupUtils {
 		PO_Checkout_Page.validate_item_image_thumbnail_displayed_checkout_page();
 	}
 	
+	@And("product name should be displayed")
+	public void checkout_page_product_name_display() {
+		PO_Checkout_Page.checkout_page_validate_product_name();
+	}
+	
+	@And("total pre-tax should be displayed")
+	public void checkout_page_total_pretax() {
+		PO_Checkout_Page.checkout_page_total_display();
+	}
+	
+	@When("^I as user enter email address (.+)$")
+	public void enter_email(String email) {
+		PO_Checkout_Page.enter_email_address(email);
+		
+	}
+	
+	@And("click on consent checkbox")
+	public void click_consent_checkbox() {
+		PO_Checkout_Page.click_consent_checkbox();
+	}
+	
+	@And("^enter first name (.+)$")
+	public void enter_fname(String fname) {
+		PO_Checkout_Page.enter_firstname(fname);
+		
+	}
+	
+	@And("^enter last name (.+)$")
+	public void enter_lname(String lname) {
+		PO_Checkout_Page.enter_lname(lname);
+	}
+	
+	@And("^enter address (.+)$")
+	public void enter_address(String address) {
+		PO_Checkout_Page.enter_address(address);
+	}
+	
+	@And("^enter Apartment number (.+)$")
+	public void enter_aptnum(String aptnum) {
+		PO_Checkout_Page.enter_aptnum(aptnum);
+	}
+	
+	@And("^enter City (.+)$")
+	public void enter_city(String city) {
+		PO_Checkout_Page.enter_city(city);
+	}
+	
+	@And("^select province (.+)$")
+	public void select_province(String province) {
+		PO_Checkout_Page.select_province(province);
+	}
+	
+	@And("^enter postal code (.+)$")
+	public void enter_postal_code(String postal_code) {
+		PO_Checkout_Page.enter_postal_code(postal_code);
+	}
+	
+	@And("^enter phone number (.+)$")
+	public void enter_phone_number(String phone_number) {
+		PO_Checkout_Page.enter_phone_number(phone_number);
+	}
+	
+	@And("Click Continue button")
+	public void click_continue_button_checkout_page() {
+		PO_Checkout_Page.click_continue_button();
+	}
+	
+	@Then("order placement page should be displayed with button Complete Reservation")
+	public void display_order_place_page() {
+		
+	}
+		
+	
 	
 	
 	
