@@ -146,10 +146,15 @@ Feature: Validate different UI components in the UI of the home page
     Then Cart page should be displayed
     And pickup store should be displayed
     And Subtotal should be displayed
+    And I as user should be able to change to qty to <newqty>
+    And Reserve online checklist should be displayed
+    When I as user click Reserve Now button
+    Then Checkout page should be displayed
+    And  cursor should be on email address field when checkout page is launched
 
     Examples: 
-      | browser |postal-code|SKU|
-      | Chrome  |L4N0W5|0287938|
+      | browser |postal-code|SKU|newqty|
+      | Chrome  |L4N0W5|0287938|2|
       
   @tag2
   Scenario Outline: Add item to Cart from product page
@@ -170,11 +175,11 @@ Feature: Validate different UI components in the UI of the home page
     And pickup store should be displayed
     And Subtotal should be displayed
     And Quantity selector should be displayed
-    
     And I as user should be able to change to qty to <new qty>
     And Reserve online checklist should be displayed
     When I as user click Reserve Now button
     Then Checkout page should be displayed
+    
     And Email cursor should be on email address field when the page is launched
     And Item thubnail image should be displayed
     And product name should be displayed

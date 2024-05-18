@@ -7,6 +7,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pkgTest.Page_Objects_Cart_Page;
+import pkgTest.Page_Objects_Checkout_Page;
 import pkgTest.Page_Objects_Home_Page;
 import pkgTest.Page_Objects_Product_Details_Page;
 import pkgTest.Page_Objects_Search_Page;
@@ -18,6 +19,7 @@ public class Step_Defs extends setupUtils {
 	Page_Objects_Search_Page PO_SearchPage;
 	Page_Objects_Product_Details_Page PO_ProductDetailsPage;
 	Page_Objects_Cart_Page PO_Cart_Page;
+	Page_Objects_Checkout_Page PO_Checkout_Page;
 	
 	public static WebDriver driver;
 	
@@ -202,6 +204,39 @@ public class Step_Defs extends setupUtils {
 	@And("Subtotal should be displayed")
 	public void subtotal_display() {
 		PO_Cart_Page.validate_cart_subtotal();
+	}
+	
+	@And("^I as user should be able to change to qty to (.+)$")
+	public void change_cart_line_item_qty(String QTY) {
+		PO_Cart_Page.change_line_item_qty_cart(QTY);
+	}
+	
+	@And("Reserve online checklist should be displayed")
+	public void validate_reserve_online_checklist() {
+		PO_Cart_Page.reserve_online_checklist_display();
+	}
+	
+	@When("I as user click Reserve Now button")
+	public void click_reserve_now_button() {
+		PO_Cart_Page.click_reserve_now_button();
+	}
+	
+	@Then("Checkout page should be displayed")
+	public void checkout_page_displayed() {
+		PO_Cart_Page.land_checkout_page();
+	}
+	
+	@And("cursor should be on email address field when checkout page is launched")
+	public void cursor_in_email_field() {
+		
+		PO_Checkout_Page=new Page_Objects_Checkout_Page(driver);
+		PO_Checkout_Page.validate_active_element_page_launch();
+		
+	}
+	
+	@And("Item thubnail image should be displayed")
+	public void checkout_page_image_thumbnail() {
+		PO_Checkout_Page.validate_item_image_thumbnail_displayed_checkout_page();
 	}
 	
 	
