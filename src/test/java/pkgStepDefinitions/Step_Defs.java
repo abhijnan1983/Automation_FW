@@ -306,9 +306,14 @@ public class Step_Defs extends setupUtils {
 		PO_Checkout_Page.click_continue_button();
 	}
 	
-	@Then("order placement page should be displayed with button Complete Reservation")
+	@Then("order placement page should be displayed")
 	public void display_order_place_page() {
-		
+		PO_Checkout_Page.navigate_to_order_placement_page();
+	}
+	
+	@And("tooltip text should be displayed on hovering mouse on question mark in phone number field")
+	public void validate_tooltip_text() {
+		PO_Checkout_Page.validate_tooltip_text_messageon_hovering_question_mark_phone_field();
 	}
 		
 	

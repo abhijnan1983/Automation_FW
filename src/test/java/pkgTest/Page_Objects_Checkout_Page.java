@@ -67,6 +67,8 @@ public class Page_Objects_Checkout_Page extends ReusableComps {
     @FindBy(css="div.oQEAZ button")
     WebElement continue_button;
  
+    @FindBy(css="label#TextField5-label+div>div>div>div>button")
+    WebElement tooltip_button;
     
     //Declare by annotation to use for explicit wait
     By email_input_checkout_page_locator=By.cssSelector("input#email");
@@ -83,7 +85,7 @@ public class Page_Objects_Checkout_Page extends ReusableComps {
     By postal_code_field_locator=By.cssSelector("input#TextField4");
     By phone_number_field_locator=By.cssSelector("input#TextField5");
     By continue_button_locator=By.cssSelector("div.oQEAZ button");
-    
+    By tooltip_button_locator=By.cssSelector("label#TextField5-label+div>div>div>div>button");
     
     public void validate_active_element_page_launch() {
     	WebElement actual_Active_element=driver.switchTo().activeElement();
@@ -164,6 +166,21 @@ public class Page_Objects_Checkout_Page extends ReusableComps {
 	public void click_continue_button() {
 		WebElementExplicitWait(continue_button_locator);
 		continue_button.click();
+	}
+	
+	public void validate_tooltip_text_messageon_hovering_question_mark_phone_field() {
+		
+		a=setup_Actions();
+		WebElementExplicitWait(tooltip_button_locator);
+		a.moveToElement(tooltip_button).build().perform();
+		String message=tooltip_button.getAttribute("validationMessage");
+		System.out.println("Tooltip message is "+message);
+		
+	}
+	
+	public void navigate_to_order_placement_page() {
+		String payment_page_url=driver.getCurrentUrl();
+		System.out.println(payment_page_url);
 	}
 
 }

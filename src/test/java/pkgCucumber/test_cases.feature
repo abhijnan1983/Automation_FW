@@ -164,8 +164,9 @@ Feature: Validate different UI components in the UI of the home page
     And select province <Province>
     And enter postal code <Postal Code>
     And enter phone number <Phone Number>
+    And tooltip text should be displayed on hovering mouse on question mark in phone number field
     And Click Continue button
-    Then order placement page should be displayed with button Complete Reservation
+    Then order placement page should be displayed 
 
     Examples: 
       | browser |postal-code|SKU|newqty|email|firstname|lastname|address|AptNumber|City|Province|Postal Code|Phone Number|
