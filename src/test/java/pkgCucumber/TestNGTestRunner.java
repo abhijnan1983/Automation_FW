@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 glue={"pkgStepDefinitions","pkgHooks"},
 monochrome=true,
 tags="not @hold",
-plugin= {"html:target/cucumber.html"})
+plugin= {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","html:target/cucumber.html"})
 
 public class TestNGTestRunner extends AbstractTestNGCucumberTests {
 
