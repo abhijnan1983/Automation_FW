@@ -70,6 +70,9 @@ public class Page_Objects_Checkout_Page extends ReusableComps {
     @FindBy(css="label#TextField5-label+div>div>div>div>button")
     WebElement tooltip_button;
     
+    @FindBy(css="div#PortalHost>div>div>div")
+    WebElement tooltip_text;
+    
     //Declare by annotation to use for explicit wait
     By email_input_checkout_page_locator=By.cssSelector("input#email");
     By checkout_page_item_image_thumbnail_locator=By.cssSelector("div.jCic4._1fragemod._1fragemoa._1fragemuu img");
@@ -86,6 +89,7 @@ public class Page_Objects_Checkout_Page extends ReusableComps {
     By phone_number_field_locator=By.cssSelector("input#TextField5");
     By continue_button_locator=By.cssSelector("div.oQEAZ button");
     By tooltip_button_locator=By.cssSelector("label#TextField5-label+div>div>div>div>button");
+    By tooltip_text_locator=By.cssSelector("div#PortalHost>div>div>div");
     
     public void validate_active_element_page_launch() {
     	WebElement actual_Active_element=driver.switchTo().activeElement();
@@ -173,14 +177,26 @@ public class Page_Objects_Checkout_Page extends ReusableComps {
 		a=setup_Actions();
 		WebElementExplicitWait(tooltip_button_locator);
 		a.moveToElement(tooltip_button).build().perform();
-		String message=tooltip_button.getAttribute("validationMessage");
-		System.out.println("Tooltip message is "+message);
+		WebElementExplicitWait(tooltip_text_locator);
+		String message=tooltip_text.getText();
+		
+		Assert.assertTrue(message.equals("In case we need to contact you about your order"));
 		
 	}
 	
 	public void navigate_to_order_placement_page() {
-		String payment_page_url=driver.getCurrentUrl();
-		System.out.println(payment_page_url);
+		
+		boolean flag=false;
+		while(flag==false) {
+		String page_url=driver.getCurrentUrl();
+		if(page_url.contains("payment")) {
+			flag=true;
+			//System.out.println(page_url);
+			break;
+		}
+	}
+		
+	Assert.assertTrue(flag);
 	}
 
 }

@@ -130,7 +130,7 @@ Feature: Validate different UI components in the UI of the home page
       |	Chrome  |0141094|
 
       
-  @newscript
+  @tag2
   Scenario Outline: Add item to Cart from product page
     When I land on home  using <browser>
     Then I verify that pop-up is closed
@@ -172,49 +172,4 @@ Feature: Validate different UI components in the UI of the home page
       | browser |postal-code|SKU|newqty|email|firstname|lastname|address|AptNumber|City|Province|Postal Code|Phone Number|
       | Chrome  |L4N0W5|0287938|2|test@yopmail.com|Test|QA|9835 King George Blvd|1103|Surrey|British Columbia|V3T5H6|2363342247|
       
-  @tag2
-  Scenario Outline: Add item to Cart from product page
-    When I land on home  using <browser>
-    Then I verify that pop-up is closed
-    And I should be able to set up my store in <postal-code>
-    When I enter SKU <SKU> number for product search
-    And hit Enter key
-    Then product link should be displayed
-    When I click product link
-    Then product details page should be displayed with thumbnail images
-    When I as user click Add to Cart button
-    Then Added to your Cart header should be displayed
-    
-    When I as user click View Cart
-    Then Cart page should be displayed
-    
-    And pickup store should be displayed
-    And Subtotal should be displayed
-    And Quantity selector should be displayed
-    And I as user should be able to change to qty to <new qty>
-    And Reserve online checklist should be displayed
-    When I as user click Reserve Now button
-    Then Checkout page should be displayed
-    And Email cursor should be on email address field when the page is launched
-    And Item thubnail image should be displayed
-    And product name should be displayed
-    And total pre-tax should be displayed
-    And Email address field should be displayed
-    
-    When I as user enter email address <email>
-    And click on consent checkbox
-    And enter first name <firstname>
-    And enter last name <lastname>
-    And enter address <address>
-    And enter Apartment number <AptNumber>
-    And enter City <City>
-    And select province <Province>
-    And enter postal code <Postal Code>
-    And enter phone number <Phone Number>
-    And Click Continue button
-    Then order placement page should be displayed with button Complete Reservation
-    
-
-    Examples: 
-      | browser |postal-code|SKU|
-      | Chrome  |L4N0W5|0287938|
+  
