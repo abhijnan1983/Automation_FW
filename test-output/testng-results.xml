@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="11" passed="7" failed="4" skipped="0">
+<testng-results ignored="0" total="11" passed="9" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-21T15:08:27 PDT" name="Default suite" finished-at="2024-05-21T15:13:29 PDT" duration-ms="302314">
+  <suite started-at="2024-05-21T15:34:11 PDT" name="Default suite" finished-at="2024-05-21T15:39:45 PDT" duration-ms="333880">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-05-21T15:08:27 PDT" name="Default test" finished-at="2024-05-21T15:13:29 PDT" duration-ms="302314">
+    <test started-at="2024-05-21T15:34:11 PDT" name="Default test" finished-at="2024-05-21T15:39:45 PDT" duration-ms="333880">
       <class name="pkgCucumber.TestNGTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:08:27 PDT" name="setUpClass" finished-at="2024-05-21T15:08:28 PDT" duration-ms="1487" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:34:11 PDT" name="setUpClass" finished-at="2024-05-21T15:34:13 PDT" duration-ms="1475" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1e14b269]]>
+                <![CDATA[org.testng.TestRunner@1bca9b64]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:08:28 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:08:59 PDT" duration-ms="30763" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:34:13 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:35:01 PDT" duration-ms="47863" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:08:59 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:09:14 PDT" duration-ms="14690" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:35:01 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:35:17 PDT" duration-ms="16757" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +53,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:09:14 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:09:29 PDT" duration-ms="15298" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:35:17 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:35:33 PDT" duration-ms="15241" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,7 +69,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:09:29 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:10:08 PDT" duration-ms="39157" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:35:33 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:36:03 PDT" duration-ms="30162" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -85,7 +85,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:10:08 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:10:59 PDT" duration-ms="50560" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:36:03 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:36:25 PDT" duration-ms="22698" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -98,35 +98,10 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: div#m-1635532295580>div+div (tried for 3 second(s) with 500 milliseconds interval)
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'DESKTOP-0IJD7UK', ip: '10.0.0.24', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Abhi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62031}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62031/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: fbf70622239b3398a89707b1acc27a8b]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: div#m-1635532295580>div+div (tried for 3 second(s) with 500 milliseconds interval)
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'DESKTOP-0IJD7UK', ip: '10.0.0.24', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Abhi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62031}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62031/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: fbf70622239b3398a89707b1acc27a8b
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at pkgTest.ReusableComps.WebElementExplicitWait(ReusableComps.java:28)
-at pkgTest.Page_Objects_Home_Page.close_pop_up(Page_Objects_Home_Page.java:144)
-at pkgStepDefinitions.Step_Defs.close_pop_up(Step_Defs.java:42)
-at ✽.I verify that pop-up is closed(file:///C:/Users/Abhi/Desktop/Selenium/Eclipse/Automation_FW/src/test/java/pkgCucumber/test_cases.feature:57)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:10:59 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:11:29 PDT" duration-ms="29824" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:36:25 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:36:42 PDT" duration-ms="16085" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -142,7 +117,7 @@ at ✽.I verify that pop-up is closed(file:///C:/Users/Abhi/Desktop/Selenium/Ecl
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:11:29 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:11:45 PDT" duration-ms="16474" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:36:42 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:36:54 PDT" duration-ms="12342" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -158,7 +133,7 @@ at ✽.I verify that pop-up is closed(file:///C:/Users/Abhi/Desktop/Selenium/Ecl
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:11:45 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:12:12 PDT" duration-ms="26913" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:36:54 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:37:20 PDT" duration-ms="26489" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -186,7 +161,7 @@ Build info: version: '4.1.4', revision: '535d840ee2'
 System info: host: 'DESKTOP-0IJD7UK', ip: '10.0.0.24', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: driver.version: unknown
 at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151)
-at pkgTest.Page_Objects_Home_Page.select_vehicle_model(Page_Objects_Home_Page.java:352)
+at pkgTest.Page_Objects_Home_Page.select_vehicle_model(Page_Objects_Home_Page.java:367)
 at pkgStepDefinitions.Step_Defs.select_model(Step_Defs.java:97)
 at ✽.I select vehicle model Camry(file:///C:/Users/Abhi/Desktop/Selenium/Eclipse/Automation_FW/src/test/java/pkgCucumber/test_cases.feature:98)
 ]]>
@@ -195,23 +170,7 @@ at ✽.I select vehicle model Camry(file:///C:/Users/Abhi/Desktop/Selenium/Eclip
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:12:12 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:12:51 PDT" duration-ms="39114" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate application home page UI components-product details page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Validate different UI components in the UI of the home page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:12:51 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:13:11 PDT" duration-ms="20161" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:37:20 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:37:53 PDT" duration-ms="32274" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -226,33 +185,49 @@ at ✽.I select vehicle model Camry(file:///C:/Users/Abhi/Desktop/Selenium/Eclip
           </params>
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: div#m-1635532295580>div+div (tried for 3 second(s) with 500 milliseconds interval)
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: button[class*='bv_main_container_row_flex bv_ratings_summary'] (tried for 3 second(s) with 500 milliseconds interval)
 Build info: version: '4.1.4', revision: '535d840ee2'
 System info: host: 'DESKTOP-0IJD7UK', ip: '10.0.0.24', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Abhi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62507}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62507/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4d1f17796ccc9009be0a3c7e527cec31]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Abhi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64203}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64203/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2a3992187191946f915429e4a7a9cb15]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: div#m-1635532295580>div+div (tried for 3 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: button[class*='bv_main_container_row_flex bv_ratings_summary'] (tried for 3 second(s) with 500 milliseconds interval)
 Build info: version: '4.1.4', revision: '535d840ee2'
 System info: host: 'DESKTOP-0IJD7UK', ip: '10.0.0.24', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Abhi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62507}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62507/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4d1f17796ccc9009be0a3c7e527cec31
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Abhi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64203}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64203/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2a3992187191946f915429e4a7a9cb15
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
 at pkgTest.ReusableComps.WebElementExplicitWait(ReusableComps.java:28)
-at pkgTest.Page_Objects_Home_Page.close_pop_up(Page_Objects_Home_Page.java:144)
-at pkgStepDefinitions.Step_Defs.close_pop_up(Step_Defs.java:42)
-at ✽.I verify that pop-up is closed(file:///C:/Users/Abhi/Desktop/Selenium/Eclipse/Automation_FW/src/test/java/pkgCucumber/test_cases.feature:118)
+at pkgTest.Page_Objects_Product_Details_Page.hover_on_stars_click_read_review(Page_Objects_Product_Details_Page.java:90)
+at pkgStepDefinitions.Step_Defs.hover_on_stars_click_review(Step_Defs.java:168)
+at ✽.I hover on stars and click read review(file:///C:/Users/Abhi/Desktop/Selenium/Eclipse/Automation_FW/src/test/java/pkgCucumber/test_cases.feature:124)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:13:11 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:13:28 PDT" duration-ms="16650" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:37:53 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:38:32 PDT" duration-ms="39665" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate application home page UI components-product details page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Validate different UI components in the UI of the home page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:38:32 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-21T15:39:43 PDT" duration-ms="70429" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -265,35 +240,10 @@ at ✽.I verify that pop-up is closed(file:///C:/Users/Abhi/Desktop/Selenium/Ecl
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: div#m-1635532295580>div+div (tried for 3 second(s) with 500 milliseconds interval)
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'DESKTOP-0IJD7UK', ip: '10.0.0.24', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Abhi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62594}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62594/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4f4a2762eb517b3910b75b8b91a50520]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: div#m-1635532295580>div+div (tried for 3 second(s) with 500 milliseconds interval)
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'DESKTOP-0IJD7UK', ip: '10.0.0.24', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Abhi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62594}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62594/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4f4a2762eb517b3910b75b8b91a50520
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at pkgTest.ReusableComps.WebElementExplicitWait(ReusableComps.java:28)
-at pkgTest.Page_Objects_Home_Page.close_pop_up(Page_Objects_Home_Page.java:144)
-at pkgStepDefinitions.Step_Defs.close_pop_up(Step_Defs.java:42)
-at ✽.I verify that pop-up is closed(file:///C:/Users/Abhi/Desktop/Selenium/Eclipse/Automation_FW/src/test/java/pkgCucumber/test_cases.feature:136)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:13:28 PDT" name="tearDownClass" finished-at="2024-05-21T15:13:29 PDT" duration-ms="1126" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-05-21T15:39:43 PDT" name="tearDownClass" finished-at="2024-05-21T15:39:45 PDT" duration-ms="2305" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

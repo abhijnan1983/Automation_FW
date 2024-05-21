@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -141,8 +142,22 @@ public class Page_Objects_Home_Page extends ReusableComps {
     
     //Method to close the pop-up window
     public void close_pop_up() {
+    	try {
     	WebElementExplicitWait(popup_close_button_locator);
     	popup_close_button.click();
+    	}
+    	catch(TimeoutException e){
+    		
+    		boolean flag=false;
+    		while(flag==false) {
+    			//WebElementExplicitWait(popup_close_button_locator);
+    			if(popup_close_button.isDisplayed()) {
+    				flag=true;
+    				break;
+    			}
+    		}
+    		
+    	}
     	
     }
     
