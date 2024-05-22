@@ -26,9 +26,9 @@ public class setupUtils {
 	public static WebDriver driver;
 	private static ThreadLocal<WebDriver> TC=new ThreadLocal<>();
 	
-	public void test() {
-		System.out.println("test");
-	}
+	/*
+	 * public void test() { System.out.println("test"); }
+	 */
 	
 	public static WebDriver setDriver(String browser) {
 		
@@ -39,6 +39,7 @@ public class setupUtils {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
+			
 			TC.set(new ChromeDriver(options));
 			driver=TC.get();
 			break;
@@ -84,13 +85,14 @@ public class setupUtils {
 
     }
 
-	public static WebDriver getDriver() {
-		return driver;
-	}
-
-	public static void setDriver(WebDriver driver) {
-		setupUtils.driver = driver;
-	}
+	
+	  public static WebDriver getDriver() { 
+		  return driver; }
+	  
+	  public static void setDriver(WebDriver driver) { 
+		  setupUtils.driver = driver;
+	  }
+	 
 
 
 }

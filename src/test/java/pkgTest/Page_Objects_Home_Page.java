@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -141,8 +142,22 @@ public class Page_Objects_Home_Page extends ReusableComps {
     
     //Method to close the pop-up window
     public void close_pop_up() {
+    	try {
     	WebElementExplicitWait(popup_close_button_locator);
     	popup_close_button.click();
+    	}
+    	catch(TimeoutException e){
+    		
+    		boolean flag=false;
+    		while(flag==false) {
+    			//WebElementExplicitWait(popup_close_button_locator);
+    			if(popup_close_button.isDisplayed()) {
+    				flag=true;
+    				break;
+    			}
+    		}
+    		
+    	}
     	
     }
     
@@ -182,11 +197,12 @@ public class Page_Objects_Home_Page extends ReusableComps {
 	  WebElementExplicitWait(find_store_button_locator);
 	  js.executeScript("arguments[0].click();", find_store_button);
 	  
-	  Thread.sleep(5000); WebElementExplicitWait(postal_code_entry_locator);
-	  a.moveToElement(postal_code_entry).click().sendKeys(postal_code).build().
-	  perform();
+	  Thread.sleep(5000); 
+	  WebElementExplicitWait(postal_code_entry_locator);
+	  a.moveToElement(postal_code_entry).click().sendKeys(postal_code).build().perform();
 	  
-	  WebElementExplicitWait(submit_button_locator); submit_button.click();
+	  WebElementExplicitWait(submit_button_locator); 
+	  submit_button.click();
 	  
 	  js.executeScript("window.scrollBy(0,250)", "");
 	  WebElementExplicitWait(make_my_store_button_locator);

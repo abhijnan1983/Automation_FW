@@ -8,7 +8,7 @@ public class Hooks {
 	@After
 	public void tear_down() {
 		
-		driver.close();
+		driver.quit();
 	}
 
 }
