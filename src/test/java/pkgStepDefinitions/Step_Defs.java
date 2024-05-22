@@ -6,6 +6,8 @@ import org.testng.Assert;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pkgTest.Page_Objects_Cart_Page;
+import pkgTest.Page_Objects_Checkout_Page;
 import pkgTest.Page_Objects_Home_Page;
 import pkgTest.Page_Objects_Product_Details_Page;
 import pkgTest.Page_Objects_Search_Page;
@@ -16,6 +18,8 @@ public class Step_Defs extends setupUtils {
 	Page_Objects_Home_Page PO_HomePage;
 	Page_Objects_Search_Page PO_SearchPage;
 	Page_Objects_Product_Details_Page PO_ProductDetailsPage;
+	Page_Objects_Cart_Page PO_Cart_Page;
+	Page_Objects_Checkout_Page PO_Checkout_Page;
 	
 	public static WebDriver driver;
 	
@@ -27,8 +31,9 @@ public class Step_Defs extends setupUtils {
 		driver=setupUtils.setDriver(browser);
 		driver.manage().deleteAllCookies();
 		driver.get("https://www.partsource.ca/");
-		driver.manage().window().maximize();
 		Thread.sleep(5000);
+		driver.manage().window().maximize();
+		
 	}
 	
 	@Then("I verify that pop-up is closed")
@@ -151,7 +156,7 @@ public class Step_Defs extends setupUtils {
 		
 	}
 	
-	@Then("product details page should be displayed with 3 thumbnail images")
+	@Then("product details page should be displayed with thumbnail images")
 	public void validate_product_details_page_displayed() {
 		PO_ProductDetailsPage=new Page_Objects_Product_Details_Page(driver);
 		PO_ProductDetailsPage.validate_thumbnail_images();
@@ -167,9 +172,150 @@ public class Step_Defs extends setupUtils {
 	public void review_should_display() throws InterruptedException {
 		PO_ProductDetailsPage.display_review();
 	}
-		
 	
-	 
+	@When("I as user click Add to Cart button")
+	public void click_add_to_cart_button() {
+		PO_ProductDetailsPage.click_add_to_cart_button();
+	}
+	
+	@Then("Added to your Cart header should be displayed")
+	public void added_to_cart_banner_displayed() throws InterruptedException {
+		PO_ProductDetailsPage.validate_added_to_cart_header();
+	}
+	
+	@When("I as user click View Cart")
+	public void click_vew_cart() {
+		PO_ProductDetailsPage.click_view_cart();
+	}
+	
+	@Then("Cart page should be displayed")
+	public void cart_page_displayed() {
+		
+		PO_Cart_Page=new Page_Objects_Cart_Page(driver);
+		PO_Cart_Page.cart_page_url();
+		
+	}
+		
+	@And("pickup store should be displayed")
+	public void pick_up_store_cart_page() {
+		PO_Cart_Page.validate_cart_selected_store();
+	}
+	
+	@And("Subtotal should be displayed")
+	public void subtotal_display() {
+		PO_Cart_Page.validate_cart_subtotal();
+	}
+	
+	@And("^I as user should be able to change to qty to (.+)$")
+	public void change_cart_line_item_qty(String QTY) {
+		PO_Cart_Page.change_line_item_qty_cart(QTY);
+	}
+	
+	@And("Reserve online checklist should be displayed")
+	public void validate_reserve_online_checklist() {
+		PO_Cart_Page.reserve_online_checklist_display();
+	}
+	
+	@When("I as user click Reserve Now button")
+	public void click_reserve_now_button() {
+		PO_Cart_Page.click_reserve_now_button();
+	}
+	
+	@Then("Checkout page should be displayed")
+	public void checkout_page_displayed() {
+		PO_Cart_Page.land_checkout_page();
+	}
+	
+	@And("cursor should be on email address field when checkout page is launched")
+	public void cursor_in_email_field() {
+		
+		PO_Checkout_Page=new Page_Objects_Checkout_Page(driver);
+		PO_Checkout_Page.validate_active_element_page_launch();
+		
+	}
+	
+	@And("Item thubnail image should be displayed")
+	public void checkout_page_image_thumbnail() {
+		PO_Checkout_Page.validate_item_image_thumbnail_displayed_checkout_page();
+	}
+	
+	@And("product name should be displayed")
+	public void checkout_page_product_name_display() {
+		PO_Checkout_Page.checkout_page_validate_product_name();
+	}
+	
+	@And("total pre-tax should be displayed")
+	public void checkout_page_total_pretax() {
+		PO_Checkout_Page.checkout_page_total_display();
+	}
+	
+	@When("^I as user enter email address (.+)$")
+	public void enter_email(String email) {
+		PO_Checkout_Page.enter_email_address(email);
+		
+	}
+	
+	@And("click on consent checkbox")
+	public void click_consent_checkbox() {
+		PO_Checkout_Page.click_consent_checkbox();
+	}
+	
+	@And("^enter first name (.+)$")
+	public void enter_fname(String fname) {
+		PO_Checkout_Page.enter_firstname(fname);
+		
+	}
+	
+	@And("^enter last name (.+)$")
+	public void enter_lname(String lname) {
+		PO_Checkout_Page.enter_lname(lname);
+	}
+	
+	@And("^enter address (.+)$")
+	public void enter_address(String address) {
+		PO_Checkout_Page.enter_address(address);
+	}
+	
+	@And("^enter Apartment number (.+)$")
+	public void enter_aptnum(String aptnum) {
+		PO_Checkout_Page.enter_aptnum(aptnum);
+	}
+	
+	@And("^enter City (.+)$")
+	public void enter_city(String city) {
+		PO_Checkout_Page.enter_city(city);
+	}
+	
+	@And("^select province (.+)$")
+	public void select_province(String province) {
+		PO_Checkout_Page.select_province(province);
+	}
+	
+	@And("^enter postal code (.+)$")
+	public void enter_postal_code(String postal_code) {
+		PO_Checkout_Page.enter_postal_code(postal_code);
+	}
+	
+	@And("^enter phone number (.+)$")
+	public void enter_phone_number(String phone_number) {
+		PO_Checkout_Page.enter_phone_number(phone_number);
+	}
+	
+	@And("Click Continue button")
+	public void click_continue_button_checkout_page() {
+		PO_Checkout_Page.click_continue_button();
+	}
+	
+	@Then("order placement page should be displayed")
+	public void display_order_place_page() {
+		PO_Checkout_Page.navigate_to_order_placement_page();
+	}
+	
+	@And("tooltip text should be displayed on hovering mouse on question mark in phone number field")
+	public void validate_tooltip_text() {
+		PO_Checkout_Page.validate_tooltip_text_messageon_hovering_question_mark_phone_field();
+	}
+		
 	
 	
 	
