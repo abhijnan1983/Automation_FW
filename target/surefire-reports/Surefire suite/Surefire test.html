@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>10/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Apr 08 22:42:05 PDT 2024</td>
+<td>Started on:</td><td>Wed May 22 12:35:27 PDT 2024</td>
 </tr>
-<tr><td>Total time:</td><td>35 seconds (35640 ms)</td>
+<tr><td>Total time:</td><td>271 seconds (271474 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,45 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add item to Cart from product page", "Validate different UI components in the UI of the home page"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: body &gt; section &gt; div &gt; div &gt; div.atc-banner--product &gt; h2&gt;span&gt;svg (tried for 3 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;DESKTOP-0IJD7UK&apos;, ip: &apos;10.0.0.24&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Abhi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:61477}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61477/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3b8bf6e1b408957273994ebf20a4a1f8
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at pkgTest.ReusableComps.WebElementExplicitWait(ReusableComps.java:28)
+	at pkgTest.Page_Objects_Product_Details_Page.validate_added_to_cart_header(Page_Objects_Product_Details_Page.java:119)
+	at pkgStepDefinitions.Step_Defs.added_to_cart_banner_displayed(Step_Defs.java:183)
+	at ✽.Added to your Cart header should be displayed(file:///C:/Users/Abhi/Desktop/Selenium/Eclipse/Automation_FW/src/test/java/pkgCucumber/test_cases.feature:144)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1584580650", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1584580650'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: body &gt; section &gt; div &gt; div &gt; div.atc-banner--product &gt; h2&gt;span&gt;svg (tried for 3 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;DESKTOP-0IJD7UK&apos;, ip: &apos;10.0.0.24&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Abhi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:61477}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61477/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3b8bf6e1b408957273994ebf20a4a1f8
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at pkgTest.ReusableComps.WebElementExplicitWait(ReusableComps.java:28)
+	at pkgTest.Page_Objects_Product_Details_Page.validate_added_to_cart_header(Page_Objects_Product_Details_Page.java:119)
+	at pkgStepDefinitions.Step_Defs.added_to_cart_banner_displayed(Step_Defs.java:183)
+	at ✽.Added to your Cart header should be displayed(file:///C:/Users/Abhi/Desktop/Selenium/Eclipse/Automation_FW/src/test/java/pkgCucumber/test_cases.feature:144)
+</pre></div></td>
+<td>38</td>
+<td>pkgCucumber.TestNGTestRunner@a9cd3b1</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,10 +115,55 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='pkgTest.SetupTest.first()'><b>first</b><br>Test class: pkgTest.SetupTest</td>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate application home page UI components-hiring banner", "Validate different UI components in the UI of the home page"</td>
 <td></td>
-<td>35</td>
-<td>pkgTest.SetupTest@45b9a632</td></tr>
+<td>17</td>
+<td>pkgCucumber.TestNGTestRunner@a9cd3b1</td></tr>
+<tr>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate application home page UI components-Make my store", "Validate different UI components in the UI of the home page"</td>
+<td></td>
+<td>30</td>
+<td>pkgCucumber.TestNGTestRunner@a9cd3b1</td></tr>
+<tr>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate application home page UI components-pop up closed", "Validate different UI components in the UI of the home page"</td>
+<td></td>
+<td>27</td>
+<td>pkgCucumber.TestNGTestRunner@a9cd3b1</td></tr>
+<tr>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate application home page UI components-reserve online message", "Validate different UI components in the UI of the home page"</td>
+<td></td>
+<td>14</td>
+<td>pkgCucumber.TestNGTestRunner@a9cd3b1</td></tr>
+<tr>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate application home page UI components-product details page", "Validate different UI components in the UI of the home page"</td>
+<td></td>
+<td>25</td>
+<td>pkgCucumber.TestNGTestRunner@a9cd3b1</td></tr>
+<tr>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate application home page UI components-find store banner", "Validate different UI components in the UI of the home page"</td>
+<td></td>
+<td>12</td>
+<td>pkgCucumber.TestNGTestRunner@a9cd3b1</td></tr>
+<tr>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate application home page UI components-product details page", "Validate different UI components in the UI of the home page"</td>
+<td></td>
+<td>40</td>
+<td>pkgCucumber.TestNGTestRunner@a9cd3b1</td></tr>
+<tr>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate application home page UI components-top brands", "Validate different UI components in the UI of the home page"</td>
+<td></td>
+<td>22</td>
+<td>pkgCucumber.TestNGTestRunner@a9cd3b1</td></tr>
+<tr>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate enable and disable state of browse parts button and click browse parts button after", "Validate different UI components in the UI of the home page"</td>
+<td></td>
+<td>24</td>
+<td>pkgCucumber.TestNGTestRunner@a9cd3b1</td></tr>
+<tr>
+<td title='pkgCucumber.TestNGTestRunner.runScenario()'><b>runScenario</b><br>Test class: pkgCucumber.TestNGTestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate application home page UI components-logo displayed", "Validate different UI components in the UI of the home page"</td>
+<td></td>
+<td>15</td>
+<td>pkgCucumber.TestNGTestRunner@a9cd3b1</td></tr>
 </table><p>
 </body>
 </html>

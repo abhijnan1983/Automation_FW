@@ -1,1 +1,14 @@
-pkgTest\SetupTest.class
+pkgTest\RetryFailedTC.class
+pkgTest\Page_Objects_Cart_Page.class
+pkgTest\setupUtils.class
+pkgTest\Page_Objects_Checkout_Page.class
+pkgHooks\Hooks.class
+pkgCucumber\TestNGTestRunner.class
+pkgTest\CustomListener.class
+pkgTest\Page_Objects_Home_Page.class
+pkgTest\Page_Objects_Search_Page.class
+pkgStepDefinitions\Step_Defs.class
+pkgTest\Page_Objects_Product_Details_Page.class
+pkgTest\ReusableComps.class
+pkgTest\AnnotationTransformer.class
+pkgTest\UITest.class
