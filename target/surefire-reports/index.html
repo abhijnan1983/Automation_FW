@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
-              <span class="suite-name border-passed">Surefire suite</span>
+              <span class="suite-name border-failed">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Surefire_suite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">11 methods, 1 failed,   10 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Surefire_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="pkgCucumber.TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Add item to Cart from product page&quot;, &quot;Validate different UI components in the UI of the home page&quot;)">runScenario("Add item to Cart from product page", "Validate different UI components in the UI of the home page")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Surefire_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +117,52 @@
                     <div class="method-list-content passed suite-Surefire_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="pkgTest.SetupTest" class="method navigator-link" hash-for-method="first">first</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="pkgCucumber.TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Validate application home page UI components-hiring banner&quot;, &quot;Validate different UI components in t...)">runScenario("Validate application home page UI components-hiring banner", "Validate different UI components in t...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="pkgCucumber.TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Validate application home page UI components-Make my store&quot;, &quot;Validate different UI components in t...)">runScenario("Validate application home page UI components-Make my store", "Validate different UI components in t...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="pkgCucumber.TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Validate application home page UI components-pop up closed&quot;, &quot;Validate different UI components in t...)">runScenario("Validate application home page UI components-pop up closed", "Validate different UI components in t...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="pkgCucumber.TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Validate application home page UI components-reserve online message&quot;, &quot;Validate different UI compon...)">runScenario("Validate application home page UI components-reserve online message", "Validate different UI compon...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="pkgCucumber.TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Validate application home page UI components-product details page&quot;, &quot;Validate different UI componen...)">runScenario("Validate application home page UI components-product details page", "Validate different UI componen...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="pkgCucumber.TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Validate application home page UI components-find store banner&quot;, &quot;Validate different UI components ...)">runScenario("Validate application home page UI components-find store banner", "Validate different UI components ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="pkgCucumber.TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Validate application home page UI components-product details page&quot;, &quot;Validate different UI componen...)">runScenario("Validate application home page UI components-product details page", "Validate different UI componen...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="pkgCucumber.TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Validate application home page UI components-top brands&quot;, &quot;Validate different UI components in the ...)">runScenario("Validate application home page UI components-top brands", "Validate different UI components in the ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="pkgCucumber.TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Validate enable and disable state of browse parts button and click browse parts button after&quot;, &quot;Val...)">runScenario("Validate enable and disable state of browse parts button and click browse parts button after", "Val...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="pkgCucumber.TestNGTestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Validate application home page UI components-logo displayed&quot;, &quot;Validate different UI components in ...)">runScenario("Validate application home page UI components-logo displayed", "Validate different UI components in ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -118,17 +177,142 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
-          <div class="suite-Surefire_suite-class-passed">
+          <div class="suite-Surefire_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">pkgTest.SetupTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">pkgCucumber.TestNGTestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="first">
-                  </a> <!-- first -->
-                  <span class="method-name">first</span>
+                  <a name="runScenario(&quot;Add item to Cart from product page&quot;, &quot;Validate different UI components in the UI of the home page&quot;)">
+                  </a> <!-- runScenario("Add item to Cart from product page", "Validate different UI components in the UI of the home page") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Add item to Cart from product page","Validate different UI components in the UI of the home page")</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: body &gt; section &gt; div &gt; div &gt; div.atc-banner--product &gt; h2&gt;span&gt;svg (tried for 3 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
+System info: host: &apos;DESKTOP-0IJD7UK&apos;, ip: &apos;10.0.0.24&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Abhi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:61477}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61477/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3b8bf6e1b408957273994ebf20a4a1f8
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at pkgTest.ReusableComps.WebElementExplicitWait(ReusableComps.java:28)
+	at pkgTest.Page_Objects_Product_Details_Page.validate_added_to_cart_header(Page_Objects_Product_Details_Page.java:119)
+	at pkgStepDefinitions.Step_Defs.added_to_cart_banner_displayed(Step_Defs.java:183)
+	at ✽.Added to your Cart header should be displayed(file:///C:/Users/Abhi/Desktop/Selenium/Eclipse/Automation_FW/src/test/java/pkgCucumber/test_cases.feature:144)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">pkgCucumber.TestNGTestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Validate application home page UI components-hiring banner&quot;, &quot;Validate different UI components in t...)">
+                  </a> <!-- runScenario("Validate application home page UI components-hiring banner", "Validate different UI components in t...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Validate application home page UI components-hiring banner","Validate different UI components in the UI of the home page")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Validate application home page UI components-Make my store&quot;, &quot;Validate different UI components in t...)">
+                  </a> <!-- runScenario("Validate application home page UI components-Make my store", "Validate different UI components in t...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Validate application home page UI components-Make my store","Validate different UI components in the UI of the home page")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Validate application home page UI components-pop up closed&quot;, &quot;Validate different UI components in t...)">
+                  </a> <!-- runScenario("Validate application home page UI components-pop up closed", "Validate different UI components in t...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Validate application home page UI components-pop up closed","Validate different UI components in the UI of the home page")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Validate application home page UI components-reserve online message&quot;, &quot;Validate different UI compon...)">
+                  </a> <!-- runScenario("Validate application home page UI components-reserve online message", "Validate different UI compon...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Validate application home page UI components-reserve online message","Validate different UI components in the UI of the home page")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Validate application home page UI components-product details page&quot;, &quot;Validate different UI componen...)">
+                  </a> <!-- runScenario("Validate application home page UI components-product details page", "Validate different UI componen...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Validate application home page UI components-product details page","Validate different UI components in the UI of the home page")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Validate application home page UI components-find store banner&quot;, &quot;Validate different UI components ...)">
+                  </a> <!-- runScenario("Validate application home page UI components-find store banner", "Validate different UI components ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Validate application home page UI components-find store banner","Validate different UI components in the UI of the home page")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Validate application home page UI components-product details page&quot;, &quot;Validate different UI componen...)">
+                  </a> <!-- runScenario("Validate application home page UI components-product details page", "Validate different UI componen...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Validate application home page UI components-product details page","Validate different UI components in the UI of the home page")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Validate application home page UI components-top brands&quot;, &quot;Validate different UI components in the ...)">
+                  </a> <!-- runScenario("Validate application home page UI components-top brands", "Validate different UI components in the ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Validate application home page UI components-top brands","Validate different UI components in the UI of the home page")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Validate enable and disable state of browse parts button and click browse parts button after&quot;, &quot;Val...)">
+                  </a> <!-- runScenario("Validate enable and disable state of browse parts button and click browse parts button after", "Val...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Validate enable and disable state of browse parts button and click browse parts button after","Validate different UI components in the UI of the home page")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Validate application home page UI components-logo displayed&quot;, &quot;Validate different UI components in ...)">
+                  </a> <!-- runScenario("Validate application home page UI components-logo displayed", "Validate different UI components in ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Validate application home page UI components-logo displayed","Validate different UI components in the UI of the home page")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -141,10 +325,10 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Surefire suite&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; name=&quot;Surefire suite&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;pkgTest.SetupTest&quot;/&gt;
+      &lt;class name=&quot;pkgCucumber.TestNGTestRunner&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Surefire test --&gt;
 &lt;/suite&gt; &lt;!-- Surefire suite --&gt;
@@ -168,6 +352,14 @@
             <span class="header-content">Groups for Surefire suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">cucumber</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">runScenario</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Surefire_suite" class="panel">
@@ -184,16 +376,56 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(11);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'first')
-data.setCell(0, 2, 'pkgTest.SetupTest')
-data.setCell(0, 3, 35535);
+data.setCell(0, 1, 'runScenario')
+data.setCell(0, 2, 'pkgCucumber.TestNGTestRunner')
+data.setCell(0, 3, 40016);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'pkgCucumber.TestNGTestRunner')
+data.setCell(1, 3, 38102);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'pkgCucumber.TestNGTestRunner')
+data.setCell(2, 3, 30349);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'pkgCucumber.TestNGTestRunner')
+data.setCell(3, 3, 27485);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'pkgCucumber.TestNGTestRunner')
+data.setCell(4, 3, 25741);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'pkgCucumber.TestNGTestRunner')
+data.setCell(5, 3, 24316);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'runScenario')
+data.setCell(6, 2, 'pkgCucumber.TestNGTestRunner')
+data.setCell(6, 3, 22709);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'runScenario')
+data.setCell(7, 2, 'pkgCucumber.TestNGTestRunner')
+data.setCell(7, 3, 17292);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'runScenario')
+data.setCell(8, 2, 'pkgCucumber.TestNGTestRunner')
+data.setCell(8, 3, 15974);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'runScenario')
+data.setCell(9, 2, 'pkgCucumber.TestNGTestRunner')
+data.setCell(9, 3, 14552);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'runScenario')
+data.setCell(10, 2, 'pkgCucumber.TestNGTestRunner')
+data.setCell(10, 3, 12718);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 35 seconds</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -219,11 +451,61 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">pkgTest.SetupTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">first</span>
+              <div class="chronological-class-name">pkgCucumber.TestNGTestRunner</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@552b15f6)</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Validate application home page UI components-pop up closed", "Validate different UI components in t...)</span>
+                <span class="method-start">1490 ms</span>
               </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Validate application home page UI components-logo displayed", "Validate different UI components in ...)</span>
+                <span class="method-start">28981 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Validate application home page UI components-reserve online message", "Validate different UI compon...)</span>
+                <span class="method-start">44956 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Validate application home page UI components-Make my store", "Validate different UI components in t...)</span>
+                <span class="method-start">59509 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Validate application home page UI components-top brands", "Validate different UI components in the ...)</span>
+                <span class="method-start">89860 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Validate application home page UI components-hiring banner", "Validate different UI components in t...)</span>
+                <span class="method-start">112570 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Validate application home page UI components-find store banner", "Validate different UI components ...)</span>
+                <span class="method-start">129863 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Validate enable and disable state of browse parts button and click browse parts button after", "Val...)</span>
+                <span class="method-start">142582 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Validate application home page UI components-product details page", "Validate different UI componen...)</span>
+                <span class="method-start">166899 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Validate application home page UI components-product details page", "Validate different UI componen...)</span>
+                <span class="method-start">206916 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Add item to Cart from product page", "Validate different UI components in the UI of the home page")</span>
+                <span class="method-start">232659 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">270774 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
