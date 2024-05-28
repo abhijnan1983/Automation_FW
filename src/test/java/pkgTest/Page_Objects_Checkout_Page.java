@@ -27,7 +27,7 @@ public class Page_Objects_Checkout_Page extends ReusableComps {
     @FindBy(css="input#email")
     WebElement email_input_checkout_page;
     
-    @FindBy(css="div.jCic4._1fragemod._1fragemoa._1fragemuu img")
+    @FindBy(css="div._6zbcq524._1fragem2s._1fragem2d._6zbcq52b img")
     WebElement checkout_page_item_image_thumbnail;
     
     @FindBy(css="div.jCic4._1fragemod._1fragemoa._1fragemuu p")
@@ -75,7 +75,7 @@ public class Page_Objects_Checkout_Page extends ReusableComps {
     
     //Declare by annotation to use for explicit wait
     By email_input_checkout_page_locator=By.cssSelector("input#email");
-    By checkout_page_item_image_thumbnail_locator=By.cssSelector("div.jCic4._1fragemod._1fragemoa._1fragemuu img");
+    By checkout_page_item_image_thumbnail_locator=By.cssSelector("div._6zbcq524._1fragem2s._1fragem2d._6zbcq52b img");
     By checkout_page_item_name_locator=By.cssSelector("div.jCic4._1fragemod._1fragemoa._1fragemuu p");
     By checkout_page_total_pretax_locator=By.cssSelector("div.jCic4._1fragemod._1fragemoa._1fragemuu strong");
     By consent_checkbox_locator=By.cssSelector("input#marketing_opt_in");
