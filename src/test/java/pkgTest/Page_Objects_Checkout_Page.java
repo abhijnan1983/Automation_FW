@@ -27,13 +27,13 @@ public class Page_Objects_Checkout_Page extends ReusableComps {
     @FindBy(css="input#email")
     WebElement email_input_checkout_page;
     
-    @FindBy(css="div._6zbcq524._1fragem2s._1fragem2d._6zbcq52b img")
+    @FindBy(css="div[aria-labelledby='ResourceList0']>div:nth-child(2)>div:nth-child(1)>div>div:nth-child(1)>picture>img")
     WebElement checkout_page_item_image_thumbnail;
     
-    @FindBy(css="div.jCic4._1fragemod._1fragemoa._1fragemuu p")
+    @FindBy(css="div[aria-labelledby='ResourceList0']>div:nth-child(2)>div:nth-child(2) p")
     WebElement checkout_page_item_name;
     
-    @FindBy(css="div.jCic4._1fragemod._1fragemoa._1fragemuu strong")
+    @FindBy(css="div[aria-labelledby='MoneyLine-Heading0']>div>div:nth-child(2)>div>div>strong")
     WebElement checkout_page_total_pretax;
     
     @FindBy(css="input#marketing_opt_in")
@@ -64,7 +64,7 @@ public class Page_Objects_Checkout_Page extends ReusableComps {
     @FindBy(css="input#TextField5")
     WebElement phone_number_field;
     
-    @FindBy(css="div.oQEAZ button")
+    @FindBy(css="div.qjCTh>div:nth-child(1)>button")
     WebElement continue_button;
  
     @FindBy(css="label#TextField5-label+div>div>div>div>button")
@@ -75,9 +75,9 @@ public class Page_Objects_Checkout_Page extends ReusableComps {
     
     //Declare by annotation to use for explicit wait
     By email_input_checkout_page_locator=By.cssSelector("input#email");
-    By checkout_page_item_image_thumbnail_locator=By.cssSelector("div._6zbcq524._1fragem2s._1fragem2d._6zbcq52b img");
-    By checkout_page_item_name_locator=By.cssSelector("div.jCic4._1fragemod._1fragemoa._1fragemuu p");
-    By checkout_page_total_pretax_locator=By.cssSelector("div.jCic4._1fragemod._1fragemoa._1fragemuu strong");
+    By checkout_page_item_image_thumbnail_locator=By.cssSelector("div[aria-labelledby='ResourceList0']>div:nth-child(2)>div:nth-child(1)>div>div:nth-child(1)>picture>img");
+    By checkout_page_item_name_locator=By.cssSelector("div[aria-labelledby='ResourceList0']>div:nth-child(2)>div:nth-child(2) p");
+    By checkout_page_total_pretax_locator=By.cssSelector("div[aria-labelledby='MoneyLine-Heading0']>div>div:nth-child(2)>div>div>strong");
     By consent_checkbox_locator=By.cssSelector("input#marketing_opt_in");
     By fname_field_locator=By.cssSelector("input#TextField0");
     By lname_field_locator=By.cssSelector("input#TextField1");
@@ -87,7 +87,7 @@ public class Page_Objects_Checkout_Page extends ReusableComps {
     By province_field_locator=By.cssSelector("select#Select1");
     By postal_code_field_locator=By.cssSelector("input#TextField4");
     By phone_number_field_locator=By.cssSelector("input#TextField5");
-    By continue_button_locator=By.cssSelector("div.oQEAZ button");
+    By continue_button_locator=By.cssSelector("div.qjCTh>div:nth-child(1)>button");
     By tooltip_button_locator=By.cssSelector("label#TextField5-label+div>div>div>div>button");
     By tooltip_text_locator=By.cssSelector("div#PortalHost>div>div>div");
     
