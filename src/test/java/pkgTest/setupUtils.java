@@ -39,6 +39,7 @@ public class setupUtils {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
+			options.addArguments("start-maximized");
 			
 			TC.set(new ChromeDriver(options));
 			driver=TC.get();
