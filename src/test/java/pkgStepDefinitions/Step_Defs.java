@@ -32,7 +32,7 @@ public class Step_Defs extends setupUtils {
 		driver.manage().deleteAllCookies();
 		driver.get("https://www.partsource.ca/");
 		Thread.sleep(5000);
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		
 	}
 	
