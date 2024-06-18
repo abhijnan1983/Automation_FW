@@ -370,7 +370,22 @@ public class Page_Objects_Home_Page extends ReusableComps {
 	public void select_vehicle_model(String model) {
 		WebElementExplicitWait(vehicle_model_locator);
 		s=new Select(vehicle_model);
-		s.selectByVisibleText(model);
+		boolean model_data=false;
+		
+		List<WebElement> models=new ArrayList<>();
+		while(model_data==false) {
+			models=s.getOptions();
+			if(models.size()>0) {
+				model_data=true;
+			}
+		}
+		
+		for(WebElement mdl:models) {
+			if(mdl.getText().equalsIgnoreCase(model)) {
+				mdl.click();
+			}
+		}
+		//s.selectByVisibleText(model);
 	}
 	
 	//Method to select vehicle trim from down
