@@ -60,6 +60,9 @@ public class Page_Objects_Home_Page extends ReusableComps {
     @FindBy(css="div#m-1689863456011>div:nth-child(1)>div:nth-child(1)>div>div:nth-child(4)")
     WebElement image_two;
     
+    @FindBy(css="div#m-1689863456011>div:nth-child(1)>div:nth-child(1)>div>div:nth-child(5)")
+    WebElement image_three;
+    
     @FindBy(css="div#m-1689863456011>div:nth-child(1)>div:nth-child(1)+div>button:nth-child(1)")
     WebElement arrow_left;
     
@@ -123,6 +126,7 @@ public class Page_Objects_Home_Page extends ReusableComps {
     By make_my_store_button_locator=By.cssSelector("input#btn_PS719");
     By image_one_locator=By.cssSelector("div#m-1689863456011>div:nth-child(1)>div:nth-child(1)>div>div:nth-child(3)");
     By image_two_locator=By.cssSelector("div#m-1689863456011>div:nth-child(1)>div:nth-child(1)>div>div:nth-child(4)");
+    By image_three_locator=By.cssSelector("div#m-1689863456011>div:nth-child(1)>div:nth-child(1)>div>div:nth-child(5)");
     By arrow_left_locator=By.cssSelector("div#m-1689863456011>div:nth-child(1)>div:nth-child(1)+div>button:nth-child(1)");
     By arrow_right_locator=By.cssSelector("div#m-1689863456011>div:nth-child(1)>div:nth-child(1)+div>button:nth-child(2)");
     By sixth_brand_locator=By.cssSelector("div#m-1689865380373>div>div:nth-child(1)>div>div");
@@ -216,13 +220,11 @@ public class Page_Objects_Home_Page extends ReusableComps {
 	  
 	  public void ads_rolling_images() throws InterruptedException {
 		  
-		  WebElementExplicitWait(image_one_locator);
-		  WebElementExplicitWait(image_two_locator);
+		  boolean image1_status=false;
+		  boolean image2_status=false;
+		  boolean image3_status=false;
 		  
-		  Integer counter1=0;
-		  Integer counter2=0;
-		  
-		  while(counter1<10){
+		  while(image1_status==false){
 			  
 			  String image1_active=image_one.getAttribute("class");
 			  
@@ -237,25 +239,29 @@ public class Page_Objects_Home_Page extends ReusableComps {
 					Assert.assertTrue(arrow_right.isDisplayed());
 					a.moveToElement(home_page_logo).build().perform();
 				  
-					break;
+					image1_status=true;
 				  
-			  }else {
-				  counter1++;
-				  Thread.sleep(1000);
 			  }
 			  
 		  }
 		  
-			while(counter2<10) {
+			while(image2_status==false) {
 				String image2_active=image_two.getAttribute("class");
 				//System.out.println(image2_active);
 				if(image2_active.contains("active")) {
 					
-					break;
+					image2_status=true;
 					
-				}else {
-					counter2++;
-					Thread.sleep(1000);
+				}
+			}
+			
+			while(image3_status==false) {
+				String image3_active=image_three.getAttribute("class");
+				//System.out.println(image2_active);
+				if(image3_active.contains("active")) {
+					
+					image3_status=true;
+					
 				}
 			}
 	  }
