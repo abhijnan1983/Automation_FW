@@ -171,5 +171,15 @@ Feature: Validate different UI components in the UI of the home page
     Examples: 
       | browser |postal-code|SKU|newqty|email|firstname|lastname|address|AptNumber|City|Province|Postal Code|Phone Number|
       | Chrome  |L4N0W5|0287938|2|test@yopmail.com|Test|QA|9835 King George Blvd|1103|Surrey|British Columbia|V3T5H6|2363342247|
+   
+  @tag2
+  Scenario Outline: Validate that accessiblity icon is displayed when home page is scrolled
+    When I land on home  using <browser>
+    Then I verify that pop-up is closed
+    And I verify that accessiblity icon is displayed on scrolling the page to the bottom
+    
+    Examples:
+    |browser|
+    |Chrome|
       
   

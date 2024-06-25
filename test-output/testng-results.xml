@@ -1,180 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="11" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-17T23:41:56 PDT" name="Default suite" finished-at="2024-06-17T23:47:17 PDT" duration-ms="320549">
+  <suite started-at="2024-06-24T17:51:45 PDT" name="Default suite" finished-at="2024-06-24T17:52:15 PDT" duration-ms="29649">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-06-17T23:41:56 PDT" name="Default test" finished-at="2024-06-17T23:47:17 PDT" duration-ms="320549">
+    <test started-at="2024-06-24T17:51:45 PDT" name="Default test" finished-at="2024-06-24T17:52:15 PDT" duration-ms="29649">
       <class name="pkgCucumber.TestNGTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-06-17T23:41:56 PDT" name="setUpClass" finished-at="2024-06-17T23:41:58 PDT" duration-ms="1478" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-06-24T17:51:46 PDT" name="setUpClass" finished-at="2024-06-24T17:51:47 PDT" duration-ms="1465" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7b00a3ea]]>
+                <![CDATA[org.testng.TestRunner@657b3b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-06-17T23:41:58 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-17T23:42:14 PDT" duration-ms="16026" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate application home page UI components-pop up closed"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Validate different UI components in the UI of the home page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-06-17T23:42:14 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-17T23:42:28 PDT" duration-ms="13690" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate application home page UI components-logo displayed"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Validate different UI components in the UI of the home page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-06-17T23:42:28 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-17T23:42:43 PDT" duration-ms="15726" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate application home page UI components-reserve online message"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Validate different UI components in the UI of the home page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-06-17T23:42:43 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-17T23:43:16 PDT" duration-ms="32694" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate application home page UI components-Make my store"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Validate different UI components in the UI of the home page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-06-17T23:43:16 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-17T23:43:47 PDT" duration-ms="30679" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate application home page UI components-rolling images for ads"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Validate different UI components in the UI of the home page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-06-17T23:43:47 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-17T23:44:18 PDT" duration-ms="31571" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate application home page UI components-top brands"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Validate different UI components in the UI of the home page"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: div#m-1689865380373>div>div:nth-child(2)>button:nth-child(2) (tried for 3 second(s) with 500 milliseconds interval)
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'DESKTOP-0IJD7UK', ip: '10.0.0.24', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Abhi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:58079}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58079/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e5bb42351e38c370c345ca3045f9243e]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: div#m-1689865380373>div>div:nth-child(2)>button:nth-child(2) (tried for 3 second(s) with 500 milliseconds interval)
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'DESKTOP-0IJD7UK', ip: '10.0.0.24', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Abhi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:58079}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58079/devtoo..., se:cdpVersion: 114.0.5735.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e5bb42351e38c370c345ca3045f9243e
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at pkgTest.ReusableComps.WebElementExplicitWait(ReusableComps.java:28)
-at pkgTest.Page_Objects_Home_Page.verify_top_brands(Page_Objects_Home_Page.java:300)
-at pkgStepDefinitions.Step_Defs.top_brands(Step_Defs.java:67)
-at ✽.top brands section should display new brands on clicking right arrow key in the section(file:///C:/Users/Abhi/Desktop/Selenium/Eclipse/Automation_FW/src/test/java/pkgCucumber/test_cases.feature:58)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-06-17T23:44:18 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-17T23:44:35 PDT" duration-ms="16831" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate application home page UI components-hiring banner"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Validate different UI components in the UI of the home page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-06-17T23:44:35 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-17T23:44:49 PDT" duration-ms="14199" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate application home page UI components-find store banner"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Validate different UI components in the UI of the home page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-06-17T23:44:49 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-17T23:45:14 PDT" duration-ms="24481" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-06-24T17:51:47 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-24T17:52:15 PDT" duration-ms="27557" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -190,55 +37,7 @@ at ✽.top brands section should display new brands on clicking right arrow key 
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-06-17T23:45:14 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-17T23:45:44 PDT" duration-ms="30483" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate application home page UI components-product details page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Validate different UI components in the UI of the home page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-06-17T23:45:44 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-17T23:46:15 PDT" duration-ms="30805" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate application home page UI components-product details page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Validate different UI components in the UI of the home page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-06-17T23:46:15 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-17T23:47:15 PDT" duration-ms="60033" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Add item to Cart from product page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Validate different UI components in the UI of the home page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-06-17T23:47:15 PDT" name="tearDownClass" finished-at="2024-06-17T23:47:17 PDT" duration-ms="1758" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:pkgCucumber.TestNGTestRunner@6a2f6f80]" started-at="2024-06-24T17:52:15 PDT" name="tearDownClass" finished-at="2024-06-24T17:52:15 PDT" duration-ms="568" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
