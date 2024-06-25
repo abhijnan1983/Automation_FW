@@ -116,6 +116,9 @@ public class Page_Objects_Home_Page extends ReusableComps {
     @FindBy(css="div[class='boost-pfs-filter-product-bottom'] a")
     WebElement product_link;
     
+    @FindBy(css="div#userwayAccessibilityIcon>span>img")
+    WebElement accessiblity_icon;
+    
     //Declare by annotation to use for explicit wait
     By popup_close_button_locator=By.cssSelector("div#m-1635532295580>div+div");
     By home_page_logo_locator=By.cssSelector("div#shopify-section-static-header-2 section div+div>div td a img");
@@ -143,6 +146,7 @@ public class Page_Objects_Home_Page extends ReusableComps {
     By browse_parts_button_2_locator=By.cssSelector("div#YMM_bar>span:nth-child(2)>div>span+input+input");
     By item_search_field_locator=By.cssSelector("input#psHeaderSearchTextBox");
     By product_link_locator=By.cssSelector("div[class='boost-pfs-filter-product-bottom'] a");
+    By accessiblity_icon_locator=By.cssSelector("div#userwayAccessibilityIcon>span>img");
     
     //Method to close the pop-up window
     public void close_pop_up() {
@@ -468,6 +472,17 @@ public class Page_Objects_Home_Page extends ReusableComps {
 			product_link.click();
 			
 		}
+		
+	}
+	
+	public void validate_accessiblity_icon_page_scroll() {
+		
+		WebElementExplicitWait(accessiblity_icon_locator);
+		Assert.assertTrue(accessiblity_icon.isDisplayed());
+		 js = (JavascriptExecutor) driver;
+		 js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		 Assert.assertTrue(accessiblity_icon.isDisplayed());
+		
 		
 	}
 	

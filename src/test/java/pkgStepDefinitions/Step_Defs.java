@@ -315,6 +315,13 @@ public class Step_Defs extends setupUtils {
 	public void validate_tooltip_text() {
 		PO_Checkout_Page.validate_tooltip_text_messageon_hovering_question_mark_phone_field();
 	}
+	
+	@And("I verify that accessiblity icon is displayed on scrolling the page to the bottom")
+	public void validate_accessiblity_icon() {
+		
+		PO_HomePage.validate_accessiblity_icon_page_scroll();
+		
+	}
 		
 	
 	
