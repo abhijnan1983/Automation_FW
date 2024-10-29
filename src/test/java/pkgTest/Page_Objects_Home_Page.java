@@ -259,15 +259,15 @@ public class Page_Objects_Home_Page extends ReusableComps {
 				}
 			}
 			
-			while(image3_status==false) {
-				String image3_active=image_three.getAttribute("class");
-				//System.out.println(image2_active);
-				if(image3_active.contains("active")) {
-					
-					image3_status=true;
-					
-				}
-			}
+			/*
+			 * while(image3_status==false) { String
+			 * image3_active=image_three.getAttribute("class");
+			 * //System.out.println(image2_active); if(image3_active.contains("active")) {
+			 * 
+			 * image3_status=true;
+			 * 
+			 * } }
+			 */
 	  }
 	  
 	  //Method to verify top brands and validate that top brands section arrow navigator works
