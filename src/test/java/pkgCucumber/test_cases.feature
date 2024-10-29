@@ -41,7 +41,7 @@ Feature: Validate different UI components in the UI of the home page
       | browser |postal-code|
       | Chrome  |V3T5H6|
   
-  @tag2
+  @Fail
   Scenario Outline: Validate application home page UI components-rolling images for ads
     When I land on home  using <browser>
     Then I verify that pop-up is closed
