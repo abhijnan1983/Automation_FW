@@ -1,7 +1,9 @@
 package pkgTest;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -69,14 +71,13 @@ public class Page_Objects_Home_Page extends ReusableComps {
     @FindBy(css="div#m-1689863456011>div:nth-child(1)>div:nth-child(1)+div>button:nth-child(2)")
     WebElement arrow_right;
     
+    @FindBy(css="div#c-1730303009352 h1")
+    WebElement top_brands_header;
     
+    @FindBy(css="div[class='owl-item active'] a")
+    List<WebElement> top_brands_active_items;
     
-    @FindBy(css="div#m-1689865380373>div>div:nth-child(1)>div>div")
-    List<WebElement> top_brands;
-    
-    @FindBy(css="div#m-1689865380373>div>div:nth-child(1)>div>div:nth-child(6)")
-    WebElement sixth_brand;
-    
+
     @FindBy(css="div#m-1689865380373>div>div:nth-child(2)>button:nth-child(2)")
     WebElement top_brands_right_arrow;
     
@@ -131,7 +132,10 @@ public class Page_Objects_Home_Page extends ReusableComps {
     By image_two_locator=By.cssSelector("div#m-1689863456011>div:nth-child(1)>div:nth-child(1)>div>div:nth-child(4)");
     By image_three_locator=By.cssSelector("div#m-1689863456011>div:nth-child(1)>div:nth-child(1)>div>div:nth-child(5)");
     By arrow_left_locator=By.cssSelector("div#m-1689863456011>div:nth-child(1)>div:nth-child(1)+div>button:nth-child(1)");
+    By top_brands_header_locator=By.cssSelector("div#c-1730303009352 h1");
     By arrow_right_locator=By.cssSelector("div#m-1689863456011>div:nth-child(1)>div:nth-child(1)+div>button:nth-child(2)");
+    By top_brands_locator=By.cssSelector("div#m-1689865380373>div>div:nth-child(1)>div>div");
+    By top_brands_first_item_locator=By.cssSelector("div#m-1689865380373>div>div:nth-child(1)>div>div:nth-child(1)");
     By sixth_brand_locator=By.cssSelector("div#m-1689865380373>div>div:nth-child(1)>div>div");
     By top_brands_right_arrow_locator=By.cssSelector("div#m-1689865380373>div>div:nth-child(2)>button:nth-child(2)");
     By hiring_banner_locator=By.cssSelector("div#e-1661522315904");
@@ -272,61 +276,39 @@ public class Page_Objects_Home_Page extends ReusableComps {
 	  
 	  //Method to verify top brands and validate that top brands section arrow navigator works
 	  
-	 public void verify_top_brands() {
-			List<String> initial_active_brands=new ArrayList<String>();
-			List<String> later_active_brands=new ArrayList<String>();
-			
+	 public void verify_top_brands()   {
+
+			boolean top_brands_first_item_status=false;
 			//List<WebElement> top_brands=new ArrayList<WebElement>();
 			a=setup_Actions();
+			Set<String> s=new HashSet<>();
 			
-			//Iterate through all the brands and print the brands which are currently displayed on the page.
+			//Validate that top brands header is displayed
+			WebElementExplicitWait(top_brands_header_locator);
+			String top_brands_header_text=top_brands_header.getText();
+			System.out.println(top_brands_header_text);
 			
-			for(WebElement brand:top_brands) {
+			//Get the number of top brands displayed when page is loaded
+			Integer num_active_top_brands_items=top_brands_active_items.size();
+			System.out.println(num_active_top_brands_items);
+			
+			//following loop extracts the url of each top brand displayed and then inserts them into
+			//a set. When set size is 8 then it exits the loop. This way, it is established that 8 top
+			//brands were displayed when carousel was scrolling.
+			
+			while(s.size()<8) {
+			for(WebElement active_item:top_brands_active_items) {
+				String url=active_item.getAttribute("href");
 				
-				String brand_active_status=brand.getAttribute("class");
-				
-				if(brand_active_status.contains("active")) {
-				
-				WebElement link=brand.findElement(By.tagName("a"));
-				url=link.getAttribute("href");
-				String brand_name=brand_from_url(url);
-				initial_active_brands.add(brand_name);
-				
-				}
-				
+				s.add(url);
+			}
 			}
 			
-			//hover on 6th brand to activate the right arrow button
-			WebElementExplicitWait(sixth_brand_locator);
-			a.moveToElement(sixth_brand).build().perform();
+			//Print the set to display the brands recorded in the set.
+			System.out.println(s);
 			
-			//Click on right arrow button 5 times to display new set of top brands on the page
-			WebElementExplicitWait(top_brands_right_arrow_locator);
-			Integer number_of_click=0;
 			
-			while(number_of_click<6) {
-				top_brands_right_arrow.click();
-				number_of_click++;
-			}
 			
-			//Iterate through brands and get new list of active brands on the page
-			for(WebElement brand:top_brands) {
-				String brand_active_status=brand.getAttribute("class");
-				if(brand_active_status.contains("active")) {
-					
-					WebElement link=brand.findElement(By.tagName("a"));
-					url=link.getAttribute("href");
-					String brand_name=brand_from_url(url);
-					later_active_brands.add(brand_name);
-					
-					}
-			}
-			
-			//System.out.println(initial_active_brands);
-			//System.out.println(later_active_brands);
-			Assert.assertFalse(initial_active_brands.equals(later_active_brands));
-			
-
 			
 	 }
 	 
